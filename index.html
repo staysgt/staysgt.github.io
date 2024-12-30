@@ -3,6 +3,8 @@
 
     <head>  
         <title> Sarah's Portfolio </title>
+        <script src="https://kit.fontawesome.com/8db597f435.js" crossorigin="anonymous"></script>
+
     </head>
 
     <link rel="stylesheet" href="/css/aboutme.css">
@@ -12,27 +14,44 @@
     <body>
             <h1 class = "aboutme" id="aboutmetitle"> About Me </h1>
             <img class= "aboutme" id="headshot" src="headshot.png">
-            <p class="aboutme"> Hello! My name is Sarah Taylor, and I am a second-year computer science student at Northeastern University. 
-                I am currently seeking a software engineering fall co-op for 2025, from May to December.
-            </p>
-        <section id="projectsection">
+            <box class="aboutme">
+                <p class="aboutme"> Hello! My name is Sarah Taylor, and I am a second-year computer science student at Northeastern University. 
+                    I am currently seeking a software engineering fall co-op for 2025, from May to December.
+                </p>
+                <box id="aboutmeicon">
+                    <i class="fa-brands fa-java"></i>
+                    <i class="fa-brands fa-python"></i>
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css"></i>
+                    <i class="fa-brands fa-react"></i>
+                </box>
+
+            </box>
+            <section id="projects">
             <h1 id="projectstitle"> Projects </h1>
             <div class="projectsheader"> 
                 Three Trios Game
                 <p class="projectdescription"> Developed during my Object-Oriented Design course, this game showcases advanced object-oriented 
                     programming concepts and practices. It incorporates design patterns such as decorators, adapters, and strategies, while 
                     adhering to the MVC (Model-View-Controller) architecture.</p>
-            </div>
+                    <a href="https://github.com/staysgt/ThreeTriosGame" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <i class="fa-brands fa-java"></i>
+                </div>
             <div class="projectsheader"> Image Compression
                 <p class="projectdescription"> Developed a tool that compresses PNG images by removing seams of pixels with the lowest energy, 
                     improving image processing efficiency and maintaining visual integrity.</p>
-
-            </div>
+                    <a href="https://github.com/staysgt/Image-Compression" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <i class="fa-brands fa-java"></i>
+                </div>
             
             <div class="projectsheader"> Project 3 
                 <p class="projectdescription"> description of project</p>
             </div>
-
         </section>
         <h1 id="experiencetitle"> Experience </h1>
         <box class="experiences"> Experience 1 </box>

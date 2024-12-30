@@ -15,9 +15,11 @@
     color:#F72C5B;
 }
 
-#projectstitle{
-    clear:left;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color:blueviolet;
-    font-size: 35px;
+a:visited{
+    color:black;
 }
+
+a:hover{
+    text-shadow:1px 1px 0px black;
+}
+
