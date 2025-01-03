@@ -1,7 +1,6 @@
 /** title for the experience section **/
 #experiencetitle{
     text-align:center;
-    margin:1%;
     font-size: 35px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color:rgb(48, 60, 161);
@@ -11,6 +10,7 @@
 /** titles for each individual experience **/
 .experiencetitles{
     border-radius:30px;
+    float:left;
     color:rgb(0, 0, 0);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size:30px;
@@ -18,24 +18,29 @@
     border-style: solid;
     border-width:5px;
     padding: 8px;
-    max-width:fit-content;
     margin:1%;
-    width: 25%;
+    width: 400px;
     height:fit-content;
     text-align:center;
+    margin:auto;
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 /** overall div for experience section **/
 #experiencesdiv{
     margin-top:3%;
+    overflow:hidden;
     border: solid;
     border-width: 5px;
     border-radius:20px;
     box-shadow: 0 4px 8px rgb(94, 94, 94);
     background-color: white;
+
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap:wrap;
     align-items: center;
     gap: 4px;
 }
@@ -45,4 +50,10 @@
     text-align:left;
     font-size:20px;
     color:#F72C5B;
+}
+
+/** company and timing styling **/
+.company, .timing{
+    font-size: 25px;
+    text-align:center; 
 }

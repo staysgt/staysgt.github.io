@@ -1,3 +1,4 @@
+/** the title for each project, represents each box as well **/
 .projectsheader{
     border-radius:30px;
     float:left;
@@ -8,18 +9,20 @@
     border-style: solid;
     border-width:5px;
     padding: 8px;
-    max-width:fit-content;
     margin:1%;
     width: 400px;
     height:fit-content;
     text-align:center;
 }
 
+/** what happens when hover on a box **/
 .projectsheader:hover{
     box-shadow: 0 4px 8px rgb(94, 94, 94);
     border-color:rgb(82, 82, 82);
 }
 
+
+/** the div containing all projects **/
 #projectsdiv{
     margin-top:3%;
     overflow:hidden;
@@ -37,6 +40,7 @@
     gap: 4px;
 }
 
+/** "projects" **/
 #projectstitle{
     text-align:center;
     margin:1%;
@@ -45,7 +49,7 @@
     color:rgb(48, 60, 161);
 }
 
-
+/** the description for each project **/
 .projectdescription{
     text-align:left;
     /* visibility: hidden; */
@@ -53,16 +57,11 @@
     color:#F72C5B;
 }
 
-
-a:visited{
+/** github visited**/ 
+.github:visited{
     color:black;
 }
 
-a:hover{
+.github:hover{
     text-shadow:1px 1px 0px black;
-}
-
-#tt{
-    float:right;
-    width:30%;
 }
