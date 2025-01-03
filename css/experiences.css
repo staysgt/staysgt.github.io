@@ -1,11 +1,48 @@
-.experiences{
-    color:red;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
-}
-
+/** title for the experience section **/
 #experiencetitle{
+    text-align:center;
+    margin:1%;
     font-size: 35px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color:blueviolet;
+    color:rgb(48, 60, 161);
+}
+
+
+/** titles for each individual experience **/
+.experiencetitles{
+    border-radius:30px;
+    color:rgb(0, 0, 0);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:30px;
+    background-color:rgb(211, 245, 255);;
+    border-style: solid;
+    border-width:5px;
+    padding: 8px;
+    max-width:fit-content;
+    margin:1%;
+    width: 25%;
+    height:fit-content;
+    text-align:center;
+}
+
+/** overall div for experience section **/
+#experiencesdiv{
+    margin-top:3%;
+    border: solid;
+    border-width: 5px;
+    border-radius:20px;
+    box-shadow: 0 4px 8px rgb(94, 94, 94);
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+/** description of each experience **/
+.exdesc{
+    text-align:left;
+    font-size:20px;
+    color:#F72C5B;
 }

@@ -1,21 +1,19 @@
 html{
-    background-image: url("images/grid.png");
-}
-h1{
-    clear:left;
-    margin-left: 1%;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color:blueviolet;
-    font-size: 35px;
+    background-color:rgb(193, 240, 254);
 }
 
+
+
 #aboutmetitle{
+    text-align:center;
+    margin:1%;
     font-size: 35px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color:blueviolet;
+    color:rgb(48, 60, 161);
 }
 
 #headshot{
+    border-radius: 100%;
     margin-right: .5%;
     margin-left: 1%;
     float:left;
@@ -33,4 +31,13 @@ h1{
     float:right;
     font-size:60px;
     color:black;
+}
+
+#aboutmediv{
+    overflow:hidden;
+    border: solid;
+    border-width: 5px;
+    border-radius:20px;
+    box-shadow: 0 4px 8px rgb(94, 94, 94);
+    background-color: white;
 }
