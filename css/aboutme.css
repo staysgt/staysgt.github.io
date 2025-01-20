@@ -3,6 +3,7 @@ html{
 }
 
 #WIP{
+    margin-top: 80px;
     text-align:center;
     font-size:40px;
 }
@@ -39,6 +40,7 @@ html{
 }
 
 #aboutmediv{
+    margin-top: 30px;
     overflow:hidden;
     border: solid;
     border-width: 5px;
