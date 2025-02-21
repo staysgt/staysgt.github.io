@@ -1,7 +1,6 @@
 /** the title for each project, represents each box as well **/
 .projectsheader{
     border-radius:30px;
-    float:left;
     color:rgb(0, 0, 0);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size:30px;
@@ -10,15 +9,31 @@
     border-width:5px;
     padding: 8px;
     margin:1%;
-    width: 400px;
+    width: 29%;
     height:fit-content;
     text-align:center;
+    display: inline-block;
 }
 
 /** what happens when hover on a box **/
 .projectsheader:hover{
     box-shadow: 0 4px 8px rgb(94, 94, 94);
-    border-color:rgb(82, 82, 82);
+    transform: scale(1.05);
+}
+
+.pskills{
+    margin:1%;
+
+    font-size: 20px;    
+}
+#githublinks{
+    font-size: 15px;    
+}
+
+.projectdate{
+    margin:1%;
+    font-size:20px;
+
 }
 
 
@@ -34,23 +49,17 @@
 
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    flex-wrap:wrap;
+    justify-content: center; 
     align-items: center;
-    gap: 4px;
+    gap:20px;
+    margin-left:auto;
+    margin-right: auto;
 }
 
-/** "projects" **/
-#projectstitle{
-    text-align:center;
-    margin:1%;
-    font-size: 35px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color:rgb(48, 60, 161);
-}
 
 /** the description for each project **/
 .projectdescription{
+    margin:2%;
     text-align:left;
     /* visibility: hidden; */
     font-size:20px;
