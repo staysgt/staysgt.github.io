@@ -1,8 +1,14 @@
+
+
 /** title for the experience section **/
-#experiencetitle{
+#categorytitle{
     text-align:center;
-    font-size: 35px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 70px;
+    font-family: sarahhandwriting;
+    font-weight:bolder;
+    line-height:0%;
+
+    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     color:rgb(48, 60, 161);
 }
 
@@ -12,7 +18,9 @@
     border-radius:30px;
     float:left;
     color:rgb(0, 0, 0);
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: sarahhandwriting;
+
+    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     font-size:30px;
     background-color:rgb(211, 245, 255);
     border-style: solid;

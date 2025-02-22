@@ -12,20 +12,25 @@
   }
   
   .nav a {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-family:sarahhandwriting;
     float: right;
     color:rgb(211, 245, 255);
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 25px;
+    line-height: 80%;
   }
 
   .nav h1{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: sarahhandwriting;
+
+    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     color:rgb(211, 245, 255);
     text-decoration: none;
-    font-size: 19px;
+    font-size: 30px;
+    line-height:15%;
     margin-left: 10px;
     float: left;
     letter-spacing: 5px;

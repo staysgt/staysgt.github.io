@@ -11,12 +11,15 @@
     <link rel="stylesheet" href="/css/projects.css">
     <link rel="stylesheet" href="/css/experiences.css">
     <link rel="stylesheet" href="/css/navigation.css">
+    <link rel="stylesheet" href="/css/beyondcode.css">
+    <link rel="stylesheet" href="/css/skills.css">
+
 
 
     <body>
-<div id="WIP"> 
+<!-- <div id="WIP"> 
     Website is currently a work in progress!
-    </div>
+    </div> -->
     <div class="nav">
         <h1> SARAH TAYLOR </h1>
         <a class="#am" href="#aboutmediv">ABOUT ME</a>
@@ -26,13 +29,14 @@
 
 <box id="am"> </box>
         <div id="aboutmediv">
-            <h1 class = "aboutme" id="aboutmetitle"> ABOUT ME </h1>
-            <img class= "aboutme" id="headshot" src="images/headshot.png">
+            <h1 class = "categorytitle" id="aboutmetitle"> ABOUT ME</h1>
+            <img class= "aboutme" id="headshot" src="images/myfacebudapest.png">
             <box class="aboutme">
                 <p class="aboutme"> 
                     Hi, I'm Sarah! I am currently a second year student at Northeastern University in Boston studying 
                     Computer Science, with a concentration in software, within the Khoury College of Computer Sciences. 
-                    I am seeking a software engineering coop for fall 2025, with availability from May-December.
+                    I am seeking a software engineering co-op for summer/fall 2025, with availability from May-December. Outside of coding, my interests include
+                    horses (grew up riding for 10+ years!), dogs, concerts, and board games.
                 </p>
                 <a class="gitlink" href="https://github.com/staysgt" target="_blank">
                     <i class="fa-brands fa-github fa-3x"></i>
@@ -46,23 +50,55 @@
 
             </box>
         </div>
+        <div id="skillsdiv">
+            <section id="skills">
+                <div class="skillsbox">
+                <h1 id="categorytitle"> SKILLS: </h1>
+                    <div class="skillsheader">
+                        <p class="skill">Java</p>
+                        <p class="skill">Python</p>
+                        <p class="skill">JavaScript/Typescript</p>
+                        <p class="skill">React</p>
+                        <p class="skill">C</p>
+                        <p class="skill">HTML</p>
+                        <p class="skill">CSS</p>
+                        <p class="skill">Docker</p>
+                        <p class="skill">GitHub</p>
+
+
+                    </div>
+                </div>
+            </section>
+        </div>
 
         <div id="projectsdiv">
             <section id="projects">        
-                <h1 id="projectstitle"> PROJECTS </h1>
+                <h1 id="categorytitle"> PROJECTS </h1>
             <div class="projectsheader" id="threetrios"> 
                 Three Trios Game
+                <p class="projectdate"> Oct - Dec 2024</p>
+                <p class="pskills"> Technologies: Java, OOP</p>
                 <p class="projectdescription"> Developed during my Object-Oriented Design course, this game showcases advanced object-oriented 
                     programming concepts and practices. It incorporates design patterns such as decorators, adapters, and strategies, while 
                     adhering to the MVC (Model-View-Controller) architecture.</p>
-                    <!-- <img id="tt" src="images/tt.png"> -->
                     <a class ="github" href="https://github.com/staysgt/ThreeTriosGame" target="_blank">
                         <i class="fa-brands fa-github"></i>
                     </a>
 
                     <i class="fa-brands fa-java"></i>
                 </div>
+                <div class="projectsheader"> Air Quality - Maching Learning
+                    <p class="projectdate"> Oct - Dec 2024</p>
+                    <p class="pskills"> Technologies: <strong>Python</strong>, NumPy, Matplotlib, Scikit-Learn</p>
+                    <p class="projectdescription"> Developed a machine learning model in Python to analyze the correlation between weather conditions 
+                        and air quality across major US cities. Utilized APIs for data collection, performed extensive data cleaning (Pandas, NumPy), and 
+                        created visualizations (Matplotlib) to enhance interpretability. Implemented and compared multiple ML models (Scikit-Learn) to optimize accuracy.
+                    </p>
+
+                </div>
             <div class="projectsheader"> Image Compression
+                <p class="projectdate"> Jan - April 2024</p>
+                <p class="pskills"> Technologies: Java</p>
                 <p class="projectdescription"> Developed a tool that compresses PNG images by removing seams of pixels with the lowest energy, 
                     improving image processing efficiency and maintaining visual integrity.</p>
                     <a class ="github" href="https://github.com/staysgt/Image-Compression" target="_blank">
@@ -71,17 +107,20 @@
                     <i class="fa-brands fa-java"></i>
                 </div>
             
-            <div class="projectsheader"> Project 3 
+            
+            <!-- <div class="projectsheader"> Project 3 
+                <p class="projectdate"> Oct - Dec 2024</p>
                 <p class="projectdescription"> description of project</p>
-            </div>
-            <div class="projectsheader"> Project 4 
+            </div> -->
+            <!-- <div class="projectsheader"> Project 4 
+                <p class="projectdate"> Oct - Dec 2024</p>
                 <p class="projectdescription"> description of project</p>
-            </div>
+            </div> -->
             </div>
         </section>
         <div id="experiencesdiv">
         <section id="exp">
-            <h1 id="experiencetitle"> EXPERIENCES </h1>
+            <h1 id="categorytitle"> EXPERIENCES </h1>
         <div class="experiencetitles"> Head Camp Counselor
             <p class="company exdesc"> Ridgefield Parks and Recreation </p>
             <p class="exdesc"> Led a team of 2-3 counselors to manage 10-15 rising kindergarteners, 
@@ -96,7 +135,15 @@
             </p>
             <p class="timing exdesc"> September 2024 - Present </p>
         </div>
+        <div class="experiencetitles">  Developer
+            <p class="company exdesc"> Northeastern Electric Racing Team </p>
+            <p class="exdesc"> Work on a team to develop a project management dashboard for the club’s engineers. Leverage TypeScript, 
+                React, Docker, and GitHub to build a robust, user-friendly platform.
+
+            <p class="timing exdesc"> September 2024 - Present </p>
+        </div>
     </div>
 </section>
+
     </body>
 </html>
