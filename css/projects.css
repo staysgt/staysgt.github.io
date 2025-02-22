@@ -1,8 +1,16 @@
+@font-face {
+    font-family: sarahhandwriting;
+    /* src: url('../fonts/Firstfont-Regular.ttf') */
+        src: url('../fonts/Takethree-Regular.ttf')
+}
+
 /** the title for each project, represents each box as well **/
 .projectsheader{
     border-radius:30px;
     color:rgb(0, 0, 0);
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: sarahhandwriting;
+    
+    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     font-size:30px;
     background-color:#d3f5ff;;
     border-style: solid;
