@@ -1,0 +1,25 @@
+[
+    {
+      "jobTitle": "Head Camp Counselor",
+      "company": "Ridgefield Parks and Recreation",
+      "description": "Led a group of campers and counselors.",
+      "timeFrame": "June 2022 - August 2024"
+    },
+    {
+        "jobTitle": "Program Instructor",
+        "company": "Kids in Tech",
+        "description": "Teach stem oriented lesson to children aged 9-14.",
+        "timeFrame": "September 2024 - Present"
+      }, {
+        "jobTitle": "Developer",
+        "company": "Northeastern Electric Racing Club",
+        "description": "Work on the web development team to help create project management dashboard",
+        "timeFrame": "September 2024 - Present"
+      },
+      {
+        "jobTitle": "Software Co-op",
+        "company": "ZOLL Medical Corporation",
+        "description": "Work on embedded systems in the medical technology field.",
+        "timeFrame": "May 2025 - Present"
+      }
+  ]

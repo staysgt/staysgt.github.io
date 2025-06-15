@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'myhandwriting';
+    src: url('./Takethree-Regular.ttf') format('truetype');
+  }
+  
+  .title-font {
+    font-family: 'myhandwriting', sans-serif;
+  }
