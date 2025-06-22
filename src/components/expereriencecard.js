@@ -32,7 +32,7 @@ import {
             gutterBottom
             variant="h6"
             component="div"
-            sx={{ fontWeight: 600, color: "#6a1b9a" }}
+            sx={{ fontWeight: 700, color: "#6a1b9a" }}
           >
             {experience.jobTitle}
           </Typography>

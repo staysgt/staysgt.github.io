@@ -15,12 +15,22 @@ export default function SkillsBox() {
       "HTML/CSS"
     ],
     frameworks: [
+      // Fullstack - typescript/javascript
       "React.js",
-      "Spring",
+      "Node.js",
       "Express.js",
       "Prisma ORM",
-      "NumPy"
-    ],    tools: [
+      "Jest",
+    
+      // Python - data
+      "NumPy",
+      "Pandas",
+      "scikit-learn",
+      "BeautifulSoup",
+    
+      // Java
+      "JUnit"
+    ],   tools: [
       "Git/GitHub",
       "Linux",
       "Docker",
@@ -29,8 +39,11 @@ export default function SkillsBox() {
       "MongoDB",
       "SQLite",
       "Postman",
+      "SQLite",
+      "MySQL",
       "Jupyter Notebook",
-      "MPLAB IDE"
+      "ThreadX",
+      "FreeRTOS"
     ]
   };
   
@@ -66,7 +79,7 @@ export default function SkillsBox() {
                 backgroundColor: "#f3e5f5",
                 color: "#6a1b9a",
                 fontWeight: 500,
-                fontSize: "12px",
+                fontSize: "13.5px",
                 padding: "4px 8px",
                 transition: "0.3s",
                 "&:hover": {
@@ -115,7 +128,7 @@ export default function SkillsBox() {
       >
         {renderSkillSection("Languages", skills.languages)}
         {renderSkillSection("Frameworks", skills.frameworks)}
-        {renderSkillSection("Applications/Tools", skills.tools)}
+        {renderSkillSection("Tools/Platforms", skills.tools)}
       </Box>
     </Box>
   );

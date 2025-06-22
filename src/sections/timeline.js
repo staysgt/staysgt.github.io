@@ -9,7 +9,7 @@ export default function ExperienceTimeline() {
         EXPERIENCES
       </Typography>
       <Typography>
-        Click on each box for more information!
+        {/* Click on each box for more information! */}
       </Typography>
       
       <Box sx={{ 
@@ -48,7 +48,7 @@ export default function ExperienceTimeline() {
           position: "relative",
           height: "100%"
         }}>
-          {[...experience].map((exp, index) => (
+          {[...experience].reverse().map((exp, index) => (
             <Box
               key={index}
               sx={{

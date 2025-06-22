@@ -10,10 +10,10 @@ export default function ProjectGrid() {
           fontWeight: 'bold'}}>PROJECTS</Typography>
           <Typography>
           <Typography>
-        Click on each box for more information!
+        {/* Click on each box for more information! */}
       </Typography>
           </Typography>
-    <Grid container spacing={3}>
+    <Grid container spacing={3} justifyContent={"center"}>
       {projects.map((proj, index) => (
         <Grid item xs={12} sm={6} md={4} key={index} sx={{ height: "100%" }}>
           <ProjectCard proj={proj} />

@@ -1,9 +1,0 @@
-[
-    {
-      "languages": ["Java", "Python", "Typescript", "C++", "C","Javascript","R", "SQL","HTML/CSS", "Kotlin"],
-      "frameworks": ["React.js", "Spring", "Prisma ORM", "Express.js", "NumPy"],
-      "tools": ["Git/Github", "MongoDB","VS Code", "Intellij", "Docker", "Linux", "Postman", "Jupyter Notebook"]
-    }
-  ]
-
-  

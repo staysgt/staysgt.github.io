@@ -2,8 +2,6 @@ import {
     Card,
     CardContent,
     Typography,
-    CardActions,
-    Button,
     Chip,
     Stack
   } from "@mui/material";
@@ -13,6 +11,7 @@ import {
     return (
       <Card
         sx={{
+          maxWidth:"390px",
           height: "100%",
           display: "flex",
           flexDirection: "column",
@@ -44,7 +43,7 @@ import {
             {proj.description}
           </Typography>
           <Typography variant="body2" sx={{ fontWeight: 500 }}>
-            Languages:
+            Technologies:
           </Typography>
           <Stack direction="row" spacing={1} sx={{ mt: 0.5, flexWrap: "wrap" }}>
             {languageList.map((lang, i) => (
@@ -61,7 +60,8 @@ import {
             ))}
           </Stack>
         </CardContent>
-        <CardActions>
+        {/* Github link - TBA */}
+        {/* <CardActions>
           <Button
             size="small"
             sx={{
@@ -73,9 +73,9 @@ import {
               },
             }}
           >
-            View
+            Github
           </Button>
-        </CardActions>
+        </CardActions> */}
       </Card>
     );
   }

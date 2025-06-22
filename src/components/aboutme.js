@@ -3,7 +3,8 @@ import myface from '../images/myface.png';
 
 export default function About() {
   return (
-    <Container maxWidth="md" sx={{ py: 4 }}>
+    <Box style={{backgroundColor: '#fcf5fa'}}>
+    <Container maxWidth="md" sx={{ py: 4 }} >
         <Typography 
           variant="h3"
           sx={{ fontFamily: 'myhandwriting, sans-serif' ,
@@ -48,7 +49,7 @@ export default function About() {
               sx={{ 
                 fontSize: '1.1rem',
                 lineHeight: 1.7,
-                color: '#2d3748'
+                color: '#2d3748',                
               }}
             >
               Hi, I'm Sarah! I am currently a rising third year student at Northeastern University in Boston studying 
@@ -59,5 +60,6 @@ export default function About() {
           </Box>
         </Box>
     </Container>
+    </Box>
   );
 }

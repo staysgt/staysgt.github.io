@@ -1,14 +1,25 @@
 [
     {
-      "name": "My Portfolio Site",
-      "description": "Built with React and no database!",
-      "languages": "React, Javascript"
+      "name": "Three Trios Game",
+      "description": "Developed during my Object-Oriented Design course, this game showcases advanced object-oriented programming\nconcepts and practices. It incorporates design patterns such as decorators, adapters, and strategies, while adhering to the MVC\n(Model-View-Controller) architecture.",
+      "languages": "Java, OOP, JUnit"
     },
 
     {
-        "name": "Proj1",
-        "description": "Proj1 description.",
-        "languages": "React, Javascript"
+        "name": "Air Quality - Maching Learning",
+        "description": "Developed a machine learning model in Python to analyze the correlation between weather conditions and air quality across major US cities. Utilized APIs for data collection, performed extensive data cleaning (Pandas, NumPy), and created visualizations (Matplotlib) to enhance interpretability. Implemented and compared multiple ML models (Scikit-Learn) to optimize accuracy.",
+        "languages": "Python, NumPy, Matplotlib, Scikit-Learn"
+      },
+
+      {
+        "name": "Image Compression",
+        "description": "Developed a tool that compresses PNG images by removing seams of pixels with the lowest energy, improving image processing efficiency and maintaining visual integrity.",
+        "languages": "Java, JUnit"
+      },
+      {
+        "name": "My Portfolio",
+        "description": "A personal portfolio website I built using React with JSON-based data storage for streamlined content management. The site showcases my projects and technical skills through a clean, responsive interface that's easy to maintain and update.",
+        "languages": "React, MUI, JSON"
       }
   ]
 
