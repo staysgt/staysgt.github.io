@@ -5,11 +5,11 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 export default function About() {
   return (
-    <Box style={{ backgroundColor: "#fcf5fa" }}>
+    <Box style={{ backgroundColor: "#fff8f5", boxShadow: "0 4px 12px rgba(93, 64, 55, 0.15)" }}>
       <Container maxWidth="md" sx={{ py: 4 }}>
         <Typography
           variant="h3"
-          sx={{ fontFamily: "myhandwriting, sans-serif", fontWeight: "bold" }}
+          sx={{ fontFamily: "myhandwriting, sans-serif", fontWeight: "bold", color: "#5d4037" }}
         >
           ABOUT ME!
         </Typography>
@@ -50,7 +50,7 @@ export default function About() {
               sx={{
                 fontSize: "1.1rem",
                 lineHeight: 1.7,
-                color: "#2d3748",
+                color: "#5d4037",
               }}
             >
               Hi, I'm Sarah! I am currently a rising third year student at
@@ -68,7 +68,7 @@ export default function About() {
           href="https://github.com/staysgt"
           target="_blank"
           rel="noreferrer"
-          style={{ color: "black", textDecoration: "none" }}
+          style={{ color: "#f06292", textDecoration: "none" }}
         >
           <GitHubIcon fontSize="large" />
         </a>
@@ -77,7 +77,7 @@ export default function About() {
           href="https://www.linkedin.com/in/staysgt"
           target="_blank"
           rel="noreferrer"
-          style={{ color: "black", textDecoration: "none" }}
+          style={{ color: "#f06292", textDecoration: "none" }}
         >
           <LinkedInIcon fontSize="large" />
         </a>

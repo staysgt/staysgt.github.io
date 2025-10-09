@@ -1,13 +1,13 @@
 import { Box, Grid, Typography } from "@mui/material";
 import projects from "../assets/data/projects.json";
-import ProjectCard from "../components/ProjectCard";
+import ProjectCard from "../components/projectcard";
 
 
 export default function ProjectGrid() {
   return (
-    <Box sx={{ p:"1rem" }} style={{ backgroundColor: '#fdd7eb' , boxShadow: '2px 2px 5px #fedeee'}}>
+    <Box sx={{ p:"1rem" }} style={{ backgroundColor: '#ffede8' , boxShadow: '0 4px 12px rgba(93, 64, 55, 0.15)'}}>
       <Typography variant="h3" sx={{fontFamily: 'myhandwriting, sans-serif',
-          fontWeight: 'bold'}}>PROJECTS</Typography>
+          fontWeight: 'bold', color: '#5d4037'}}>PROJECTS</Typography>
           <Typography>
           <Typography>
         {/* Click on each box for more information! */}

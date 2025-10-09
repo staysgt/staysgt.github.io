@@ -1,6 +1,9 @@
 import { Box, Typography, Chip, Stack } from "@mui/material";
+import { useState } from "react";
 
 export default function SkillsBox() {
+  const [hoveredSkill, setHoveredSkill] = useState(null);
+
   const skills = {
     languages: [
       "Python",
@@ -20,6 +23,7 @@ export default function SkillsBox() {
       "Node.js",
       "Express.js",
       "Prisma ORM",
+      "REST APIs",
       "Jest",
     
       // Python - data
@@ -29,8 +33,12 @@ export default function SkillsBox() {
       "BeautifulSoup",
     
       // Java
-      "JUnit"
-    ],   tools: [
+      "JUnit",
+      
+      // GUI
+      "Qt/PyQt"
+    ],
+    tools: [
       "Git/GitHub",
       "Linux",
       "Docker",
@@ -38,16 +46,30 @@ export default function SkillsBox() {
       "IntelliJ",
       "MongoDB",
       "SQLite",
+      "Supabase",
       "Postman",
-      "SQLite",
       "MySQL",
       "Jupyter Notebook",
       "ThreadX",
       "FreeRTOS"
     ]
   };
+
+  // Define relationships between languages and their frameworks/tools
+  const skillRelations = {
+    "Python": ["NumPy", "Pandas", "scikit-learn", "BeautifulSoup", "Qt/PyQt", "Jupyter Notebook"],
+    "Java": ["JUnit", "IntelliJ"],
+    "TypeScript": ["React.js", "Node.js", "Express.js", "Prisma ORM", "REST APIs", "Jest"],
+    "JavaScript": ["React.js", "Node.js", "Express.js", "Prisma ORM", "REST APIs", "Jest"],
+    "C++": ["Qt/PyQt", "ThreadX", "FreeRTOS"],
+    "C": ["ThreadX", "FreeRTOS"],
+    "SQL": ["MongoDB", "SQLite", "Supabase", "MySQL"],
+    "HTML/CSS": ["React.js", "VS Code"]
+  };
   
   const renderSkillSection = (title, skillsList) => {
+    const isLanguageSection = title === "Languages";
+    
     return (
       <Box sx={{ flex: 1, minWidth: "250px" }} >
         <Typography 
@@ -55,7 +77,7 @@ export default function SkillsBox() {
           sx={{ 
             mb: 2, 
             textAlign: "center", 
-            color: "#6a1b9a",
+            color: "#5d4037",
             fontWeight: 600
           }}
         >
@@ -71,26 +93,41 @@ export default function SkillsBox() {
             alignItems: "center"
           }}
         >
-          {skillsList.map((skill, index) => (
-            <Chip
-              key={index}
-              label={skill}
-              sx={{
-                backgroundColor: "#f3e5f5",
-                color: "#6a1b9a",
-                fontWeight: 500,
-                fontSize: "13.5px",
-                padding: "4px 8px",
-                transition: "0.3s",
-                "&:hover": {
-                  backgroundColor: "#6a1b9a",
-                  color: "#ffffff",
-                  transform: "scale(1.05)",
-                  boxShadow: 3,
-                },
-              }}
-            />
-          ))}
+          {skillsList.map((skill, index) => {
+            // Check if this skill should be highlighted
+            const isRelated = hoveredSkill && skillRelations[hoveredSkill]?.includes(skill);
+            const isHovered = hoveredSkill === skill;
+            
+            // Strawberry pink for hover, darker coral for related
+            const hoverColor = isHovered ? "#f06292" : (isRelated ? "#ff7043" : "#ffffff");
+            
+            return (
+              <Chip
+                key={index}
+                label={skill}
+                onMouseEnter={() => isLanguageSection && setHoveredSkill(skill)}
+                onMouseLeave={() => isLanguageSection && setHoveredSkill(null)}
+                sx={{
+                  backgroundColor: hoverColor,
+                  color: isHovered || isRelated ? "#ffffff" : "#5d4037",
+                  fontWeight: 500,
+                  fontSize: "13.5px",
+                  padding: "4px 8px",
+                  transition: "0.3s",
+                  transform: isHovered || isRelated ? "scale(1.05)" : "scale(1)",
+                  boxShadow: isHovered || isRelated ? 3 : 0,
+                  border: isHovered || isRelated ? "none" : "1px solid #ffede8",
+                  "&:hover": {
+                    backgroundColor: "#f06292",
+                    color: "#ffffff",
+                    transform: "scale(1.05)",
+                    boxShadow: 3,
+                    border: "none",
+                  },
+                }}
+              />
+            );
+          })}
         </Stack>
       </Box>
     );
@@ -100,9 +137,9 @@ export default function SkillsBox() {
     <Box 
       sx={{ 
         p: "2rem",
-        backgroundColor: '#fdd7eb',
-        boxShadow: '2px 2px 5px gray',
-        borderRadius: 2
+        backgroundColor: '#ffede8',
+        boxShadow: '0 4px 12px rgba(93, 64, 55, 0.15)',
+        borderRadius: 0
       }}
     >
       <Typography 
@@ -111,7 +148,8 @@ export default function SkillsBox() {
           mb: 4, 
           textAlign: "center", 
           fontFamily: 'myhandwriting, sans-serif',
-          fontWeight: 'bold'
+          fontWeight: 'bold',
+          color: '#5d4037'
         }}
       >
         ASK ME ANYTHING ABOUT...

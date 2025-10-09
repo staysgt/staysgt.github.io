@@ -26,7 +26,7 @@ import {
             transform: "translateY(-5px)",
             boxShadow: 6,
           },
-          backgroundColor: "#fffafc",
+          backgroundColor: "#ffffff",
         }}
       >
         <CardContent sx={{ flexGrow: 1 }}>
@@ -35,7 +35,7 @@ import {
             gutterBottom
             variant="h6"
             component="div"
-            sx={{ fontWeight: 600, color: "#6a1b9a" }}
+            sx={{ fontWeight: 600, color: "#f06292" }}
           >
             {proj.name}
           </Typography>
@@ -43,7 +43,7 @@ import {
           href={proj.link}
           target="_blank"
           rel="noreferrer"
-          style={{ color: "black", textDecoration: "none" }}
+          style={{ color: "#ff7043", textDecoration: "none" }}
         >
           <GitHubIcon fontSize="small" />
         </a>
@@ -55,7 +55,7 @@ import {
           >
             {proj.description}
           </Typography>
-          <Typography variant="body2" sx={{ fontWeight: 500 }}>
+          <Typography variant="body2" sx={{ fontWeight: 500, color: "#5d4037" }}>
             Technologies:
           </Typography>
           <Stack direction="row" spacing={1} sx={{ mt: 0.5, flexWrap: "wrap" }}>
@@ -65,9 +65,15 @@ import {
                 label={lang}
                 size="small"
                 sx={{
-                  backgroundColor: "#f3e5f5",
-                  color: "#6a1b9a",
+                  backgroundColor: "#ffffff",
+                  color: "#5d4037",
                   fontWeight: 500,
+                  border: "1px solid #ffede8",
+                  "&:hover": {
+                    backgroundColor: i % 2 === 0 ? "#f06292" : "#ff7043",
+                    color: "#ffffff",
+                    border: "none",
+                  }
                 }}
               />
             ))}
@@ -78,11 +84,11 @@ import {
           <Button
             size="small"
             sx={{
-              color: "#6a1b9a",
+              color: "#f06292",
               fontWeight: 500,
               textTransform: "none",
               "&:hover": {
-                backgroundColor: "#f3e5f5",
+                backgroundColor: "#ffede8",
               },
             }}
           >

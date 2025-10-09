@@ -24,7 +24,7 @@ import {
             transform: "translateY(-5px)",
             boxShadow: 6,
           },
-          backgroundColor: "#fffafc",
+          backgroundColor: "#ffffff",
         }}
       >
         <CardContent sx={{ flexGrow: 1 }}>
@@ -32,7 +32,7 @@ import {
             gutterBottom
             variant="h6"
             component="div"
-            sx={{ fontWeight: 700, color: "#6a1b9a" }}
+            sx={{ fontWeight: 700, color: "#f06292" }}
           >
             {experience.jobTitle}
           </Typography>
@@ -40,7 +40,7 @@ import {
             variant="subtitle1"
             sx={{ 
               fontWeight: 500, 
-              color: "#8e24aa", 
+              color: "#ff7043", 
               mb: 1 
             }}
           >
@@ -66,8 +66,8 @@ import {
               label={experience.timeFrame}
               size="small"
               sx={{
-                backgroundColor: "#f3e5f5",
-                color: "#6a1b9a",
+                backgroundColor: "#ffede8",
+                color: "#f06292",
                 fontWeight: 500,
               }}
             />
@@ -77,11 +77,11 @@ import {
           <Button
             size="small"
             sx={{
-              color: "#6a1b9a",
+              color: "#f06292",
               fontWeight: 500,
               textTransform: "none",
               "&:hover": {
-                backgroundColor: "#f3e5f5",
+                backgroundColor: "#ffede8",
               },
             }}
           >

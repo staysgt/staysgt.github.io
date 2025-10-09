@@ -3,9 +3,9 @@ import experience from "../assets/data/experiences.json";
 
 export default function ExperienceTimeline() {
   return (
-    <Box sx={{ p: "2rem" }} style={{ backgroundColor: '#fcf5fa', boxShadow: '2px 2px 5px gray' }}>
+    <Box sx={{ p: "2rem" }} style={{ backgroundColor: '#fff8f5', boxShadow: '0 4px 12px rgba(93, 64, 55, 0.15)' }}>
       <Typography variant="h3" sx={{ mb: 4, textAlign: "center",  fontFamily: 'myhandwriting, sans-serif',
-          fontWeight: 'bold' }}>
+          fontWeight: 'bold', color: '#5d4037' }}>
         EXPERIENCES
       </Typography>
       <Typography>
@@ -21,11 +21,11 @@ export default function ExperienceTimeline() {
           height: "8px",
         },
         "&::-webkit-scrollbar-track": {
-          backgroundColor: "#f3e5f5",
+          backgroundColor: "#ffede8",
           borderRadius: "4px",
         },
         "&::-webkit-scrollbar-thumb": {
-          backgroundColor: "#6a1b9a",
+          backgroundColor: "#ff7043",
           borderRadius: "4px",
         }
       }}>
@@ -36,7 +36,7 @@ export default function ExperienceTimeline() {
             left: 0,
             right: 0,
             height: "4px",
-            backgroundColor: "#6a1b9a",
+            background: "linear-gradient(to right, #f06292, #ff7043)",
             zIndex: 1
           }}
         />
@@ -70,10 +70,10 @@ export default function ExperienceTimeline() {
                   transform: "translateX(-50%)",
                   width: "16px",
                   height: "16px",
-                  backgroundColor: "#6a1b9a",
+                  backgroundColor: index % 2 === 0 ? "#f06292" : "#ff7043",
                   borderRadius: "50%",
                   zIndex: 2,
-                  border: "3px solid #fcf5fa"
+                  border: "3px solid #fff8f5"
                 }}
               />
               
@@ -82,7 +82,7 @@ export default function ExperienceTimeline() {
                 sx={{
                   width: "280px",
                   p: 3,
-                  backgroundColor: "#fffafc",
+                  backgroundColor: "#ffffff",
                   borderRadius: 3,
                   position: "absolute",
                   top: index % 2 === 0 ? "20px" : "310px",
@@ -102,7 +102,7 @@ export default function ExperienceTimeline() {
                     height: 0,
                     borderLeft: "12px solid transparent",
                     borderRight: "12px solid transparent",
-                    [index % 2 === 0 ? "borderTop" : "borderBottom"]: "12px solid #fffafc",
+                    [index % 2 === 0 ? "borderTop" : "borderBottom"]: "12px solid #ffffff",
                   }
                 }}
               >
@@ -110,7 +110,7 @@ export default function ExperienceTimeline() {
                   variant="h6"
                   sx={{ 
                     fontWeight: 600, 
-                    color: "#6a1b9a",
+                    color: "#f06292",
                     mb: 1
                   }}
                 >
@@ -121,7 +121,7 @@ export default function ExperienceTimeline() {
                   variant="subtitle1"
                   sx={{ 
                     fontWeight: 500, 
-                    color: "#8e24aa", 
+                    color: "#ff7043", 
                     mb: 2
                   }}
                 >
@@ -140,8 +140,8 @@ export default function ExperienceTimeline() {
                   label={exp.timeFrame}
                   size="small"
                   sx={{
-                    backgroundColor: "#f3e5f5",
-                    color: "#6a1b9a",
+                    backgroundColor: "#ffede8",
+                    color: "#f06292",
                     fontWeight: 500,
                   }}
                 />
