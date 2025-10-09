@@ -1,5 +1,5 @@
 import { Box, Container, Typography } from "@mui/material";
-import myface from "../images/myface.png";
+import myface from "../assets/images/myface.png";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 

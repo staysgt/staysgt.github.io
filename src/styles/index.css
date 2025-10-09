@@ -14,7 +14,7 @@ code {
 
 @font-face {
   font-family: 'myhandwriting';
-  src: url('./fonts/Takethree-Regular.ttf') format('truetype');
+  src: url('../assets/fonts/Takethree-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

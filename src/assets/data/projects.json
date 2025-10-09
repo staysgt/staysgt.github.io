@@ -2,7 +2,8 @@
     {
       "name": "Three Trios Game",
       "description": "Developed during my Object-Oriented Design course, this game showcases advanced object-oriented programming\nconcepts and practices. It incorporates design patterns such as decorators, adapters, and strategies, while adhering to the MVC\n(Model-View-Controller) architecture.",
-      "languages": "Java, OOP, JUnit"
+      "languages": "Java, OOP, JUnit",
+      "link": "https://github.com/staysgt/ThreeTriosGame"
     },
 
     {
@@ -14,12 +15,14 @@
       {
         "name": "Image Compression",
         "description": "Developed a tool that compresses PNG images by removing seams of pixels with the lowest energy, improving image processing efficiency and maintaining visual integrity.",
-        "languages": "Java, JUnit"
+        "languages": "Java, JUnit",
+        "link":"https://github.com/staysgt/Image-Compression"
       },
       {
         "name": "My Portfolio",
         "description": "A personal portfolio website I built using React with JSON-based data storage for streamlined content management. The site showcases my projects and technical skills through a clean, responsive interface that's easy to maintain and update.",
-        "languages": "React, MUI, JSON"
+        "languages": "React, MUI, JSON",
+        "link":"https://github.com/staysgt/staysgt.github.io"
       }
   ]
 

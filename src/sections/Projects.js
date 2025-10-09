@@ -1,6 +1,6 @@
 import { Box, Grid, Typography } from "@mui/material";
-import projects from "../json/projects.json";
-import ProjectCard from "../components/projectcard";
+import projects from "../assets/data/projects.json";
+import ProjectCard from "../components/ProjectCard";
 
 
 export default function ProjectGrid() {

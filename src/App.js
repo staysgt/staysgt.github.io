@@ -1,9 +1,9 @@
-import './App.css';
-import About from './components/aboutme';
-import SkillsBox from './components/skillsbox';
-import ProjectGrid from './sections/projectstable';
-import ExperienceTimeline from './sections/timeline';
-import './fonts/fonts.css';
+import './styles/App.css';
+import About from './sections/About';
+import SkillsBox from './sections/Skills';
+import ProjectGrid from './sections/Projects';
+import ExperienceTimeline from './sections/Experience';
+import './assets/fonts/fonts.css';
 import { createTheme, ThemeProvider } from '@mui/material';
 
 const theme = createTheme({

@@ -1,5 +1,5 @@
 import { Box, Typography, Paper, Chip } from "@mui/material";
-import experience from "../json/experiences.json";
+import experience from "../assets/data/experiences.json";
 
 export default function ExperienceTimeline() {
   return (

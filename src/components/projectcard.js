@@ -3,8 +3,11 @@ import {
     CardContent,
     Typography,
     Chip,
-    Stack
+    Stack,
+    Box,
   } from "@mui/material";
+  import GitHubIcon from "@mui/icons-material/GitHub";
+
   
   export default function ProjectCard({ proj }) {
     const languageList = proj.languages?.split(/[\s,]+/) || [];
@@ -27,6 +30,7 @@ import {
         }}
       >
         <CardContent sx={{ flexGrow: 1 }}>
+          <Box>
           <Typography
             gutterBottom
             variant="h6"
@@ -35,6 +39,15 @@ import {
           >
             {proj.name}
           </Typography>
+          <a
+          href={proj.link}
+          target="_blank"
+          rel="noreferrer"
+          style={{ color: "black", textDecoration: "none" }}
+        >
+          <GitHubIcon fontSize="small" />
+        </a>
+          </Box>
           <Typography
             variant="body2"
             color="text.secondary"
