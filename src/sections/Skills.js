@@ -98,8 +98,8 @@ export default function SkillsBox() {
             const isRelated = hoveredSkill && skillRelations[hoveredSkill]?.includes(skill);
             const isHovered = hoveredSkill === skill;
             
-            // Strawberry pink for hover, darker coral for related
-            const hoverColor = isHovered ? "#f06292" : (isRelated ? "#ff7043" : "#ffffff");
+            // Strawberry pink for hover, dusty rose for related
+            const hoverColor = isHovered ? "#f06292" : (isRelated ? "#f48fb1" : "#ffffff");
             
             return (
               <Chip
@@ -116,7 +116,7 @@ export default function SkillsBox() {
                   transition: "0.3s",
                   transform: isHovered || isRelated ? "scale(1.05)" : "scale(1)",
                   boxShadow: isHovered || isRelated ? 3 : 0,
-                  border: isHovered || isRelated ? "none" : "1px solid #ffede8",
+                  border: isHovered || isRelated ? "none" : "1px solid #fce4ec",
                   "&:hover": {
                     backgroundColor: "#f06292",
                     color: "#ffffff",
@@ -137,7 +137,7 @@ export default function SkillsBox() {
     <Box 
       sx={{ 
         p: "2rem",
-        backgroundColor: '#ffede8',
+        backgroundColor: '#fce4ec',
         boxShadow: '0 4px 12px rgba(93, 64, 55, 0.15)',
         borderRadius: 0
       }}

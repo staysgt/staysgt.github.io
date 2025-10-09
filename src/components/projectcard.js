@@ -43,7 +43,7 @@ import {
           href={proj.link}
           target="_blank"
           rel="noreferrer"
-          style={{ color: "#ff7043", textDecoration: "none" }}
+          style={{ color: "#f48fb1", textDecoration: "none" }}
         >
           <GitHubIcon fontSize="small" />
         </a>
@@ -68,9 +68,9 @@ import {
                   backgroundColor: "#ffffff",
                   color: "#5d4037",
                   fontWeight: 500,
-                  border: "1px solid #ffede8",
+                  border: "1px solid #fce4ec",
                   "&:hover": {
-                    backgroundColor: i % 2 === 0 ? "#f06292" : "#ff7043",
+                    backgroundColor: i % 2 === 0 ? "#f06292" : "#f48fb1",
                     color: "#ffffff",
                     border: "none",
                   }
@@ -88,7 +88,7 @@ import {
               fontWeight: 500,
               textTransform: "none",
               "&:hover": {
-                backgroundColor: "#ffede8",
+                backgroundColor: "#fce4ec",
               },
             }}
           >

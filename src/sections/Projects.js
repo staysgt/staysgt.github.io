@@ -5,7 +5,7 @@ import ProjectCard from "../components/projectcard";
 
 export default function ProjectGrid() {
   return (
-    <Box sx={{ p:"1rem" }} style={{ backgroundColor: '#ffede8' , boxShadow: '0 4px 12px rgba(93, 64, 55, 0.15)'}}>
+    <Box sx={{ p:"1rem" }} style={{ backgroundColor: '#fce4ec' , boxShadow: '0 4px 12px rgba(93, 64, 55, 0.15)'}}>
       <Typography variant="h3" sx={{fontFamily: 'myhandwriting, sans-serif',
           fontWeight: 'bold', color: '#5d4037'}}>PROJECTS</Typography>
           <Typography>

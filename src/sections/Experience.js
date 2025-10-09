@@ -21,11 +21,11 @@ export default function ExperienceTimeline() {
           height: "8px",
         },
         "&::-webkit-scrollbar-track": {
-          backgroundColor: "#ffede8",
+          backgroundColor: "#fce4ec",
           borderRadius: "4px",
         },
         "&::-webkit-scrollbar-thumb": {
-          backgroundColor: "#ff7043",
+          backgroundColor: "#f48fb1",
           borderRadius: "4px",
         }
       }}>
@@ -36,7 +36,7 @@ export default function ExperienceTimeline() {
             left: 0,
             right: 0,
             height: "4px",
-            background: "linear-gradient(to right, #f06292, #ff7043)",
+            background: "linear-gradient(to right, #f06292, #f48fb1)",
             zIndex: 1
           }}
         />
@@ -70,7 +70,7 @@ export default function ExperienceTimeline() {
                   transform: "translateX(-50%)",
                   width: "16px",
                   height: "16px",
-                  backgroundColor: index % 2 === 0 ? "#f06292" : "#ff7043",
+                  backgroundColor: index % 2 === 0 ? "#f06292" : "#f48fb1",
                   borderRadius: "50%",
                   zIndex: 2,
                   border: "3px solid #fff8f5"
@@ -121,7 +121,7 @@ export default function ExperienceTimeline() {
                   variant="subtitle1"
                   sx={{ 
                     fontWeight: 500, 
-                    color: "#ff7043", 
+                    color: "#f48fb1", 
                     mb: 2
                   }}
                 >
@@ -140,7 +140,7 @@ export default function ExperienceTimeline() {
                   label={exp.timeFrame}
                   size="small"
                   sx={{
-                    backgroundColor: "#ffede8",
+                    backgroundColor: "#fce4ec",
                     color: "#f06292",
                     fontWeight: 500,
                   }}

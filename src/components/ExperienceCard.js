@@ -40,7 +40,7 @@ import {
             variant="subtitle1"
             sx={{ 
               fontWeight: 500, 
-              color: "#ff7043", 
+              color: "#f48fb1", 
               mb: 1 
             }}
           >
@@ -66,7 +66,7 @@ import {
               label={experience.timeFrame}
               size="small"
               sx={{
-                backgroundColor: "#ffede8",
+                backgroundColor: "#fce4ec",
                 color: "#f06292",
                 fontWeight: 500,
               }}
@@ -81,7 +81,7 @@ import {
               fontWeight: 500,
               textTransform: "none",
               "&:hover": {
-                backgroundColor: "#ffede8",
+                backgroundColor: "#fce4ec",
               },
             }}
           >

@@ -53,7 +53,7 @@ export default function About() {
                 color: "#5d4037",
               }}
             >
-              Hi, I'm Sarah! I am currently a rising third year student at
+              Hi, I'm Sarah! I am currently a third year student at
               Northeastern University in Boston studying Computer Science, with
               a concentration in software, within the Khoury College of Computer
               Sciences. Currently, I'm completing my first co-op at ZOLL Medical
