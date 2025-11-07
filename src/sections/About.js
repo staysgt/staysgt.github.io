@@ -2,14 +2,24 @@ import { Box, Container, Typography } from "@mui/material";
 import myface from "../assets/images/myface.png";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { palette } from "../styles/colors";
 
 export default function About() {
   return (
-    <Box style={{ backgroundColor: "#fff8f5", boxShadow: "0 4px 12px rgba(93, 64, 55, 0.15)" }}>
+    <Box
+      style={{
+        backgroundColor: palette.softGreen,
+        boxShadow: "0 4px 12px rgba(63, 46, 38, 0.12)",
+      }}
+    >
       <Container maxWidth="md" sx={{ py: 4 }}>
         <Typography
           variant="h3"
-          sx={{ fontFamily: "myhandwriting, sans-serif", fontWeight: "bold", color: "#5d4037" }}
+          sx={{
+            fontFamily: "myhandwriting, sans-serif",
+            fontWeight: "bold",
+            color: palette.richBrown,
+          }}
         >
           ABOUT ME!
         </Typography>
@@ -50,7 +60,7 @@ export default function About() {
               sx={{
                 fontSize: "1.1rem",
                 lineHeight: 1.7,
-                color: "#5d4037",
+                color: palette.darkBrown,
               }}
             >
               Hi, I'm Sarah! I am currently a third year student at
@@ -64,23 +74,25 @@ export default function About() {
             </Typography>
           </Box>
         </Box>
-        <a
-          href="https://github.com/staysgt"
-          target="_blank"
-          rel="noreferrer"
-          style={{ color: "#f06292", textDecoration: "none" }}
-        >
-          <GitHubIcon fontSize="large" />
-        </a>
+        <Box sx={{ display: "flex", gap: 2, mt: 3, justifyContent: "center" }}>
+          <a
+            href="https://github.com/staysgt"
+            target="_blank"
+            rel="noreferrer"
+            style={{ color: palette.richBrown, textDecoration: "none" }}
+            >
+            <GitHubIcon sx={{ fontSize: 50 }} />
+          </a>
 
-        <a
-          href="https://www.linkedin.com/in/staysgt"
-          target="_blank"
-          rel="noreferrer"
-          style={{ color: "#f06292", textDecoration: "none" }}
-        >
-          <LinkedInIcon fontSize="large" />
-        </a>
+          <a
+            href="https://www.linkedin.com/in/staysgt"
+            target="_blank"
+            rel="noreferrer"
+            style={{ color: palette.richBrown, textDecoration: "none" }}
+          >
+            <LinkedInIcon sx={{ fontSize: 50 }} />
+          </a>
+        </Box>
       </Container>
     </Box>
   );

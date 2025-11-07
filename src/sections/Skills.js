@@ -1,5 +1,6 @@
 import { Box, Typography, Chip, Stack } from "@mui/material";
 import { useState } from "react";
+import { palette } from "../styles/colors";
 
 export default function SkillsBox() {
   const [hoveredSkill, setHoveredSkill] = useState(null);
@@ -77,7 +78,7 @@ export default function SkillsBox() {
           sx={{ 
             mb: 2, 
             textAlign: "center", 
-            color: "#5d4037",
+            color: palette.richBrown,
             fontWeight: 600
           }}
         >
@@ -97,9 +98,18 @@ export default function SkillsBox() {
             // Check if this skill should be highlighted
             const isRelated = hoveredSkill && skillRelations[hoveredSkill]?.includes(skill);
             const isHovered = hoveredSkill === skill;
+            const textColor = isHovered
+              ? palette.warmWhite
+              : isRelated
+              ? palette.darkGreen
+              : palette.richBrown;
             
             // Strawberry pink for hover, dusty rose for related
-            const hoverColor = isHovered ? "#f06292" : (isRelated ? "#f48fb1" : "#ffffff");
+            const hoverColor = isHovered
+              ? palette.darkGreen
+              : isRelated
+              ? palette.midGreen
+              : palette.warmWhite;
             
             return (
               <Chip
@@ -109,17 +119,17 @@ export default function SkillsBox() {
                 onMouseLeave={() => isLanguageSection && setHoveredSkill(null)}
                 sx={{
                   backgroundColor: hoverColor,
-                  color: isHovered || isRelated ? "#ffffff" : "#5d4037",
+                  color: textColor,
                   fontWeight: 500,
                   fontSize: "13.5px",
                   padding: "4px 8px",
                   transition: "0.3s",
                   transform: isHovered || isRelated ? "scale(1.05)" : "scale(1)",
                   boxShadow: isHovered || isRelated ? 3 : 0,
-                  border: isHovered || isRelated ? "none" : "1px solid #fce4ec",
+                  border: isHovered || isRelated ? "none" : `1px solid ${palette.midGreen}`,
                   "&:hover": {
-                    backgroundColor: "#f06292",
-                    color: "#ffffff",
+                    backgroundColor: palette.darkGreen,
+                    color: palette.warmWhite,
                     transform: "scale(1.05)",
                     boxShadow: 3,
                     border: "none",
@@ -137,9 +147,10 @@ export default function SkillsBox() {
     <Box 
       sx={{ 
         p: "2rem",
-        backgroundColor: '#fce4ec',
-        boxShadow: '0 4px 12px rgba(93, 64, 55, 0.15)',
-        borderRadius: 0
+        backgroundColor: palette.softGreen,
+        boxShadow: "0 4px 12px rgba(63, 46, 38, 0.12)",
+        borderRadius: 0,
+        borderTop: `3px solid ${palette.midGreen}`,
       }}
     >
       <Typography 
@@ -149,7 +160,7 @@ export default function SkillsBox() {
           textAlign: "center", 
           fontFamily: 'myhandwriting, sans-serif',
           fontWeight: 'bold',
-          color: '#5d4037'
+          color: palette.richBrown
         }}
       >
         ASK ME ANYTHING ABOUT...

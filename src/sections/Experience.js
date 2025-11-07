@@ -1,11 +1,27 @@
 import { Box, Typography, Paper, Chip } from "@mui/material";
 import experience from "../assets/data/experiences.json";
+import { palette } from "../styles/colors";
 
 export default function ExperienceTimeline() {
   return (
-    <Box sx={{ p: "2rem" }} style={{ backgroundColor: '#fff8f5', boxShadow: '0 4px 12px rgba(93, 64, 55, 0.15)' }}>
-      <Typography variant="h3" sx={{ mb: 4, textAlign: "center",  fontFamily: 'myhandwriting, sans-serif',
-          fontWeight: 'bold', color: '#5d4037' }}>
+    <Box
+      sx={{ p: "2rem" }}
+      style={{
+        backgroundColor: palette.softGreen,
+        boxShadow: "0 4px 12px rgba(63, 46, 38, 0.12)",
+        borderTop: `3px solid ${palette.midGreen}`,
+      }}
+    >
+      <Typography
+        variant="h3"
+        sx={{
+          mb: 4,
+          textAlign: "center",
+          fontFamily: 'myhandwriting, sans-serif',
+          fontWeight: 'bold',
+          color: palette.richBrown,
+        }}
+      >
         EXPERIENCES
       </Typography>
       <Typography>
@@ -21,11 +37,11 @@ export default function ExperienceTimeline() {
           height: "8px",
         },
         "&::-webkit-scrollbar-track": {
-          backgroundColor: "#fce4ec",
+          backgroundColor: palette.midGreen,
           borderRadius: "4px",
         },
         "&::-webkit-scrollbar-thumb": {
-          backgroundColor: "#f48fb1",
+          backgroundColor: palette.deepGreen,
           borderRadius: "4px",
         }
       }}>
@@ -36,7 +52,7 @@ export default function ExperienceTimeline() {
             left: 0,
             right: 0,
             height: "4px",
-            background: "linear-gradient(to right, #f06292, #f48fb1)",
+            background: palette.softBrown,
             zIndex: 1
           }}
         />
@@ -70,10 +86,10 @@ export default function ExperienceTimeline() {
                   transform: "translateX(-50%)",
                   width: "16px",
                   height: "16px",
-                  backgroundColor: index % 2 === 0 ? "#f06292" : "#f48fb1",
+                  backgroundColor: palette.softBrown,
                   borderRadius: "50%",
                   zIndex: 2,
-                  border: "3px solid #fff8f5"
+                  border: `3px solid ${palette.softGreen}`
                 }}
               />
               
@@ -110,7 +126,7 @@ export default function ExperienceTimeline() {
                   variant="h6"
                   sx={{ 
                     fontWeight: 600, 
-                    color: "#f06292",
+                    color: palette.darkGreen,
                     mb: 1
                   }}
                 >
@@ -119,9 +135,9 @@ export default function ExperienceTimeline() {
                 
                 <Typography
                   variant="subtitle1"
-                  sx={{ 
-                    fontWeight: 500, 
-                    color: "#f48fb1", 
+                  sx={{
+                    fontWeight: 500,
+                    color: palette.richBrown,
                     mb: 2
                   }}
                 >
@@ -140,8 +156,8 @@ export default function ExperienceTimeline() {
                   label={exp.timeFrame}
                   size="small"
                   sx={{
-                    backgroundColor: "#fce4ec",
-                    color: "#f06292",
+                    backgroundColor: palette.midGreen,
+                    color: palette.richBrown,
                     fontWeight: 500,
                   }}
                 />

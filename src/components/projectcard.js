@@ -1,101 +1,86 @@
 import {
-    Card,
-    CardContent,
-    Typography,
-    Chip,
-    Stack,
-    Box,
-  } from "@mui/material";
-  import GitHubIcon from "@mui/icons-material/GitHub";
+  Card,
+  CardContent,
+  Typography,
+  Chip,
+  Stack,
+  Box,
+} from "@mui/material";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import { palette } from "../styles/colors";
 
-  
-  export default function ProjectCard({ proj }) {
-    const languageList = proj.languages?.split(/[\s,]+/) || [];
-    return (
-      <Card
-        sx={{
-          maxWidth:"390px",
-          height: "100%",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          borderRadius: 4,
-          boxShadow: 3,
-          transition: "0.3s",
-          "&:hover": {
-            transform: "translateY(-5px)",
-            boxShadow: 6,
-          },
-          backgroundColor: "#ffffff",
-        }}
-      >
-        <CardContent sx={{ flexGrow: 1 }}>
-          <Box>
+export default function ProjectCard({ proj }) {
+  const languageList = proj.languages?.split(/[\s,]+/) || [];
+  return (
+    <Card
+      sx={{
+        maxWidth: "390px",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        borderRadius: 4,
+        boxShadow: "0 6px 12px rgba(63, 46, 38, 0.12)",
+        transition: "0.3s",
+        "&:hover": {
+          transform: "translateY(-5px)",
+          boxShadow: "0 10px 16px rgba(63, 46, 38, 0.18)",
+        },
+        backgroundColor: palette.warmWhite,
+        border: `1px solid ${palette.midGreen}`,
+      }}
+    >
+      <CardContent sx={{ flexGrow: 1 }}>
+        <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <Typography
             gutterBottom
             variant="h6"
             component="div"
-            sx={{ fontWeight: 600, color: "#f06292" }}
+            sx={{ fontWeight: 600, color: palette.richBrown }}
           >
             {proj.name}
           </Typography>
           <a
-          href={proj.link}
-          target="_blank"
-          rel="noreferrer"
-          style={{ color: "#f48fb1", textDecoration: "none" }}
+            href={proj.link}
+            target="_blank"
+            rel="noreferrer"
+            style={{ color: palette.richBrown, textDecoration: "none" }}
+          >
+            <GitHubIcon fontSize="small" />
+          </a>
+        </Box>
+        <Typography
+          variant="body2"
+          color="text.secondary"
+          sx={{ mb: 1, fontSize: 14 }}
         >
-          <GitHubIcon fontSize="small" />
-        </a>
-          </Box>
-          <Typography
-            variant="body2"
-            color="text.secondary"
-            sx={{ mb: 1, fontSize: 14 }}
-          >
-            {proj.description}
-          </Typography>
-          <Typography variant="body2" sx={{ fontWeight: 500, color: "#5d4037" }}>
-            Technologies:
-          </Typography>
-          <Stack direction="row" spacing={1} sx={{ mt: 0.5, flexWrap: "wrap" }}>
-            {languageList.map((lang, i) => (
-              <Chip
-                key={i}
-                label={lang}
-                size="small"
-                sx={{
-                  backgroundColor: "#ffffff",
-                  color: "#5d4037",
-                  fontWeight: 500,
-                  border: "1px solid #fce4ec",
-                  "&:hover": {
-                    backgroundColor: i % 2 === 0 ? "#f06292" : "#f48fb1",
-                    color: "#ffffff",
-                    border: "none",
-                  }
-                }}
-              />
-            ))}
-          </Stack>
-        </CardContent>
-        {/* Github link - TBA */}
-        {/* <CardActions>
-          <Button
-            size="small"
-            sx={{
-              color: "#f06292",
-              fontWeight: 500,
-              textTransform: "none",
-              "&:hover": {
-                backgroundColor: "#fce4ec",
-              },
-            }}
-          >
-            Github
-          </Button>
-        </CardActions> */}
-      </Card>
-    );
-  }
-  
+          {proj.description}
+        </Typography>
+        <Typography variant="body2" sx={{ fontWeight: 500, color: palette.richBrown }}>
+          Technologies:
+        </Typography>
+        <Stack direction="row" spacing={1} sx={{ mt: 0.5, flexWrap: "wrap" }}>
+          {languageList.map((lang, i) => (
+            <Chip
+              key={i}
+              label={lang}
+              size="small"
+              sx={{
+                backgroundColor: palette.warmWhite,
+                color: palette.richBrown,
+                fontWeight: 500,
+                border: `1px solid ${palette.midGreen}`,
+                transition: "0.3s",
+                "&:hover": {
+                  backgroundColor: palette.midGreen,
+                  color: palette.darkGreen,
+                  border: "none",
+                }
+              }}
+            />
+          ))}
+        </Stack>
+      </CardContent>
+    </Card>
+  );
+}
