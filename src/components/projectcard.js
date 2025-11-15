@@ -5,12 +5,17 @@ import {
   Chip,
   Stack,
   Box,
+  CardMedia,
 } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { palette } from "../styles/colors";
+import projectPlaceholder from "../assets/images/projectsImages/ThreeTrios.png";
 
 export default function ProjectCard({ proj }) {
   const languageList = proj.languages?.split(/[\s,]+/) || [];
+  const imageSrc = proj.image
+    ? require(`../assets/images/projectsImages/${proj.image}`)
+    : projectPlaceholder;
   return (
     <Card
       sx={{
@@ -30,6 +35,13 @@ export default function ProjectCard({ proj }) {
         border: `1px solid ${palette.midGreen}`,
       }}
     >
+      <CardMedia
+        component="img"
+        height="180"
+        image={imageSrc}
+        alt={`${proj.name} preview`}
+        sx={{ objectFit: "cover", borderBottom: `1px solid ${palette.midGreen}` }}
+      />
       <CardContent sx={{ flexGrow: 1 }}>
         <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <Typography

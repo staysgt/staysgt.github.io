@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import projects from "../assets/data/projects.json";
 import ProjectCard from "../components/projectcard";
 import { palette } from "../styles/colors";
@@ -6,11 +6,10 @@ import { palette } from "../styles/colors";
 export default function ProjectGrid() {
   return (
     <Box
-      sx={{ p: "1rem" }}
+      sx={{ p: "1rem", mb: { xs: 6, md: 10 } }}
       style={{
         backgroundColor: palette.softGreen,
         boxShadow: "0 4px 12px rgba(63, 46, 38, 0.12)",
-        borderTop: `3px solid ${palette.midGreen}`,
       }}
     >
       <Typography
@@ -20,18 +19,54 @@ export default function ProjectGrid() {
           fontWeight: 'bold',
           color: palette.richBrown,
           textAlign: "center",
-          mb: 2,
+          mb: 1.5,
         }}
       >
         PROJECTS
       </Typography>
-      <Grid container spacing={3} justifyContent={"center"}>
+      <Typography
+        variant="body2"
+        sx={{
+          color: palette.darkBrown,
+          textAlign: "center",
+          mb: 3,
+        }}
+      >
+        Scroll left/right for more projects!
+      </Typography>
+      <Box
+        sx={{
+          display: "flex",
+          gap: 2,
+          overflowX: "auto",
+          py: 1,
+          px: 1,
+          scrollSnapType: "x mandatory",
+          "&::-webkit-scrollbar": {
+            height: "8px",
+          },
+          "&::-webkit-scrollbar-track": {
+            backgroundColor: palette.midGreen,
+            borderRadius: "999px",
+          },
+          "&::-webkit-scrollbar-thumb": {
+            backgroundColor: palette.softBrown,
+            borderRadius: "999px",
+          },
+        }}
+      >
         {projects.map((proj, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index} sx={{ height: "100%" }}>
+          <Box
+            key={index}
+            sx={{
+              flex: "0 0 320px",
+              scrollSnapAlign: "start",
+            }}
+          >
             <ProjectCard proj={proj} />
-          </Grid>
+          </Box>
         ))}
-      </Grid>
+      </Box>
     </Box>
   );
 }
