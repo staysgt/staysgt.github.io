@@ -5,11 +5,10 @@ import { palette } from "../styles/colors";
 export default function ExperienceTimeline() {
   return (
     <Box
-      sx={{ p: "2rem" }}
+      sx={{ p: "2rem", mb: { xs: 6, md: 10 } }}
       style={{
         backgroundColor: palette.softGreen,
         boxShadow: "0 4px 12px rgba(63, 46, 38, 0.12)",
-        borderTop: `3px solid ${palette.midGreen}`,
       }}
     >
       <Typography
@@ -24,147 +23,79 @@ export default function ExperienceTimeline() {
       >
         EXPERIENCES
       </Typography>
-      <Typography>
-        {/* Click on each box for more information! */}
-      </Typography>
-      
-      <Box sx={{ 
-        position: "relative", 
-        overflowX: "auto",
-        overflowY: "hidden",
-        height: "420px",
-        "&::-webkit-scrollbar": {
-          height: "8px",
-        },
-        "&::-webkit-scrollbar-track": {
-          backgroundColor: palette.midGreen,
-          borderRadius: "4px",
-        },
-        "&::-webkit-scrollbar-thumb": {
-          backgroundColor: palette.deepGreen,
-          borderRadius: "4px",
-        }
-      }}>
-        <Box
-          sx={{
-            position: "absolute",
-            top: "300px",
-            left: 0,
-            right: 0,
-            height: "4px",
-            background: palette.softBrown,
-            zIndex: 1
-          }}
-        />
-        
-        <Box sx={{ 
-          display: "flex", 
-          gap: 4,
-          px: 4,
-          position: "relative",
-          height: "100%"
-        }}>
-          {[...experience].reverse().map((exp, index) => (
-            <Box
+      <Box
+        sx={{
+          display: "flex",
+          gap: 3,
+          flexWrap: "wrap",
+          justifyContent: "center",
+        }}
+      >
+        {[...experience].reverse().map((exp, index) => (
+            <Paper
               key={index}
+              elevation={3}
               sx={{
-                position: "relative",
-                minWidth: "320px",
-                flex: "0 0 auto",
-                height: "320px",
+                p: 2,
+                backgroundColor: "#ffffff",
+                borderRadius: 3,
+                borderLeft: `6px solid ${palette.darkGreen}`,
+                boxShadow: "0 4px 10px rgba(63, 46, 38, 0.1)",
+              width: { xs: "100%", sm: "48%", md: "32%" },
+              }}
+            >
+            <Box
+              sx={{
                 display: "flex",
-                alignItems: "center",
-                justifyContent: "flex-start",
-                flexDirection: "column",
+                flexDirection: { xs: "column", sm: "row" },
+                alignItems: { xs: "flex-start", sm: "center" },
+                gap: 2,
               }}
             >
               <Box
                 sx={{
-                  position: "absolute",
-                  top: "292px",
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  width: "16px",
-                  height: "16px",
-                  backgroundColor: palette.softBrown,
-                  borderRadius: "50%",
-                  zIndex: 2,
-                  border: `3px solid ${palette.softGreen}`
-                }}
-              />
-              
-              <Paper
-                elevation={3}
-                sx={{
-                  width: "280px",
-                  p: 3,
-                  backgroundColor: "#ffffff",
-                  borderRadius: 3,
-                  position: "absolute",
-                  top: "20px",
-                  transition: "0.3s",
-                  "&:hover": {
-                    transform: "translateY(-10px)",
-                    boxShadow: 6,
-                  },
-
-                  "&::before": {
-                    content: '""',
-                    position: "absolute",
-                    bottom: "-12px",
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                    width: 0,
-                    height: 0,
-                    borderLeft: "12px solid transparent",
-                    borderRight: "12px solid transparent",
-                    borderTop: "12px solid #ffffff",
-                  }
+                  flex: 1,
+                  textAlign: { xs: "left", sm: "left" },
                 }}
               >
                 <Typography
                   variant="h6"
-                  sx={{ 
-                    fontWeight: 600, 
+                  sx={{
+                    fontWeight: 600,
                     color: palette.darkGreen,
-                    mb: 1
                   }}
                 >
                   {exp.jobTitle}
                 </Typography>
-                
                 <Typography
                   variant="subtitle1"
                   sx={{
                     fontWeight: 500,
                     color: palette.richBrown,
-                    mb: 2
                   }}
                 >
                   {exp.company}
                 </Typography>
-                
-                <Typography
-                  variant="body2"
-                  color="text.secondary"
-                  sx={{ mb: 2, fontSize: 14, lineHeight: 1.5 }}
-                >
-                  {exp.description}
-                </Typography>
-                
-                <Chip
-                  label={exp.timeFrame}
-                  size="small"
-                  sx={{
-                    backgroundColor: palette.midGreen,
-                    color: palette.richBrown,
-                    fontWeight: 500,
-                  }}
-                />
-              </Paper>
+              </Box>
+              <Chip
+                label={exp.timeFrame}
+                size="small"
+                sx={{
+                  backgroundColor: palette.midGreen,
+                  color: palette.richBrown,
+                  fontWeight: 500,
+                }}
+              />
             </Box>
-          ))}
-        </Box>
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                sx={{ mt: 2, fontSize: 14, lineHeight: 1.6 }}
+              >
+                {exp.description}
+              </Typography>
+          </Paper>
+        ))}
       </Box>
     </Box>
   );

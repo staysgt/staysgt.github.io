@@ -2,24 +2,29 @@
     {
       "jobTitle": "Head Camp Counselor",
       "company": "Ridgefield Parks and Recreation",
-      "description": "Led a group of campers and counselors.",
-      "timeFrame": "June 2022 - August 2024"
+      "description": "Led a group of 10-15 kindergarteners, ensuring a fun and safe camp experience. Guided 2-3 co-counselors, directed campers through activities, and maintained a positive atmosphere. Ensured campers adhered to safety protocol and communicated with parents about camper behavior.",
+      "timeFrame": "June 2022 - August 2024",
+      "image": "Rec.png"
     },
     {
-        "jobTitle": "Program Instructor",
-        "company": "Kids in Tech",
-        "description": "Teach stem oriented lesson to children aged 9-14.",
-        "timeFrame": "September 2024 - Present"
-      }, {
-        "jobTitle": "Full Stack Developer",
-        "company": "Northeastern Electric Racing Club",
-        "description": "Work on the web development team to help create project management dashboard",
-        "timeFrame": "September 2024 - Present"
-      },
-      {
-        "jobTitle": "Software Engineer Co-op",
-        "company": "ZOLL Medical Corporation",
-        "description": "Work on embedded systems in the medical technology field.",
-        "timeFrame": "May 2025 - Present"
-      }
+      "jobTitle": "Program Instructor",
+      "company": "Kids in Tech",
+      "description": "Engaged students (ages 9-14) in STEAM through weekly interactive, tech-focused lessons. Collaborated with other instructors to produce engaging and interactive material for sessions.",
+      "timeFrame": "September 2024 - April 2025",
+      "image": "KiT.png"
+    },
+    {
+      "jobTitle": "Full Stack Developer",
+      "company": "Northeastern Electric Racing Club",
+      "description": "Work on the web development team to help create project management dashboard",
+      "timeFrame": "September 2024 - Present",
+      "image": "NER2.png"
+    },
+    {
+      "jobTitle": "Software Engineer Co-op",
+      "company": "ZOLL Medical Corporation",
+      "description": "Work on embedded systems in the medical technology field.",
+      "timeFrame": "May 2025 - Present",
+      "image": "ZOLL.png"
+    }
   ]

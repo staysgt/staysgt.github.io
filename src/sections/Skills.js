@@ -1,10 +1,7 @@
-import { Box, Typography, Chip, Stack } from "@mui/material";
-import { useState } from "react";
+import { Box, Typography } from "@mui/material";
 import { palette } from "../styles/colors";
 
 export default function SkillsBox() {
-  const [hoveredSkill, setHoveredSkill] = useState(null);
-
   const skills = {
     languages: [
       "Python",
@@ -56,92 +53,74 @@ export default function SkillsBox() {
     ]
   };
 
-  // Define relationships between languages and their frameworks/tools
-  const skillRelations = {
-    "Python": ["NumPy", "Pandas", "scikit-learn", "BeautifulSoup", "Qt/PyQt", "Jupyter Notebook"],
-    "Java": ["JUnit", "IntelliJ"],
-    "TypeScript": ["React.js", "Node.js", "Express.js", "Prisma ORM", "REST APIs", "Jest"],
-    "JavaScript": ["React.js", "Node.js", "Express.js", "Prisma ORM", "REST APIs", "Jest"],
-    "C++": ["Qt/PyQt", "ThreadX", "FreeRTOS"],
-    "C": ["ThreadX", "FreeRTOS"],
-    "SQL": ["MongoDB", "SQLite", "Supabase", "MySQL"],
-    "HTML/CSS": ["React.js", "VS Code"]
+  const categoryColors = {
+    Languages: palette.darkGreen,
+    Frameworks: palette.darkGreen,
+    "Tools/Platforms": palette.darkGreen,
   };
-  
-  const renderSkillSection = (title, skillsList) => {
-    const isLanguageSection = title === "Languages";
-    
-    return (
-      <Box sx={{ flex: 1, minWidth: "250px" }} >
-        <Typography 
-          variant="h5" 
-          sx={{ 
-            mb: 2, 
-            textAlign: "center", 
-            color: palette.richBrown,
-            fontWeight: 600
-          }}
-        >
-          {title}
-        </Typography>
-        <Stack 
-          direction="row" 
-          spacing={1} 
-          sx={{ 
-            flexWrap: "wrap",
-            gap: 1,
-            justifyContent: "center",
-            alignItems: "center"
-          }}
-        >
-          {skillsList.map((skill, index) => {
-            // Check if this skill should be highlighted
-            const isRelated = hoveredSkill && skillRelations[hoveredSkill]?.includes(skill);
-            const isHovered = hoveredSkill === skill;
-            const textColor = isHovered
-              ? palette.warmWhite
-              : isRelated
-              ? palette.darkGreen
-              : palette.richBrown;
-            
-            // Strawberry pink for hover, dusty rose for related
-            const hoverColor = isHovered
-              ? palette.darkGreen
-              : isRelated
-              ? palette.midGreen
-              : palette.warmWhite;
-            
-            return (
-              <Chip
-                key={index}
-                label={skill}
-                onMouseEnter={() => isLanguageSection && setHoveredSkill(skill)}
-                onMouseLeave={() => isLanguageSection && setHoveredSkill(null)}
-                sx={{
-                  backgroundColor: hoverColor,
-                  color: textColor,
-                  fontWeight: 500,
-                  fontSize: "13.5px",
-                  padding: "4px 8px",
-                  transition: "0.3s",
-                  transform: isHovered || isRelated ? "scale(1.05)" : "scale(1)",
-                  boxShadow: isHovered || isRelated ? 3 : 0,
-                  border: isHovered || isRelated ? "none" : `1px solid ${palette.midGreen}`,
-                  "&:hover": {
-                    backgroundColor: palette.darkGreen,
-                    color: palette.warmWhite,
-                    transform: "scale(1.05)",
-                    boxShadow: 3,
-                    border: "none",
-                  },
-                }}
-              />
-            );
-          })}
-        </Stack>
+
+  const renderSkillSection = (title, skillsList) => (
+    <Box
+      sx={{
+        backgroundColor: palette.warmWhite,
+        border: `1px solid ${categoryColors[title] || palette.midGreen}`,
+        borderRadius: 2,
+        p: 2,
+        minHeight: "200px",
+        boxShadow: `0 2px 8px rgba(0,0,0,0.04)`,
+      }}
+    >
+      <Typography
+        variant="h6"
+        sx={{
+          mb: 1.5,
+          color: palette.richBrown,
+          fontWeight: 700,
+          textAlign: "center",
+          borderBottom: `2px dotted ${categoryColors[title] || palette.midGreen}`,
+          pb: 1,
+        }}
+      >
+        {title}
+      </Typography>
+      <Box
+        component="ul"
+        sx={{
+          listStyle: "none",
+          p: 0,
+          m: 0,
+          display: "flex",
+          flexWrap: "wrap",
+          gap: 1,
+          justifyContent: "center",
+        }}
+      >
+        {skillsList.map((skill, index) => (
+          <Typography
+            component="li"
+            variant="body2"
+            key={index}
+            sx={{
+              color: palette.darkBrown,
+              fontWeight: 500,
+              textAlign: "center",
+              px: 0.5,
+              display: "flex",
+              alignItems: "center",
+              "&::after": {
+                content: index !== skillsList.length - 1 ? '"•"' : '""',
+                display: "inline-block",
+                marginLeft: "8px",
+                color: palette.darkBrown,
+              },
+            }}
+          >
+            {skill}
+          </Typography>
+        ))}
       </Box>
-    );
-  };
+    </Box>
+  );
 
   return (
     <Box 
@@ -166,13 +145,15 @@ export default function SkillsBox() {
         ASK ME ANYTHING ABOUT...
       </Typography>
       
-      <Box 
-        sx={{ 
-          display: "flex", 
-          justifyContent: "space-around", 
-          alignItems: "flex-start",
-          gap: 3,
-          flexWrap: "wrap"
+      <Box
+        sx={{
+          display: "grid",
+          gridTemplateColumns: {
+            xs: "1fr",
+            sm: "repeat(2, 1fr)",
+            md: "repeat(3, 1fr)",
+          },
+          gap: 2,
         }}
       >
         {renderSkillSection("Languages", skills.languages)}
