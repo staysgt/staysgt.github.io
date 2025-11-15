@@ -32,7 +32,7 @@ export default function ExperienceTimeline() {
         position: "relative", 
         overflowX: "auto",
         overflowY: "hidden",
-        height: "600px",
+        height: "420px",
         "&::-webkit-scrollbar": {
           height: "8px",
         },
@@ -48,7 +48,7 @@ export default function ExperienceTimeline() {
         <Box
           sx={{
             position: "absolute",
-            top: "250px",
+            top: "300px",
             left: 0,
             right: 0,
             height: "4px",
@@ -69,19 +69,19 @@ export default function ExperienceTimeline() {
               key={index}
               sx={{
                 position: "relative",
-                minWidth: "300px",
+                minWidth: "320px",
                 flex: "0 0 auto",
-                height: "100%",
+                height: "320px",
                 display: "flex",
                 alignItems: "center",
-                justifyContent: index % 2 === 0 ? "flex-start" : "flex-end",
-                flexDirection: "column"
+                justifyContent: "flex-start",
+                flexDirection: "column",
               }}
             >
               <Box
                 sx={{
                   position: "absolute",
-                  top: "242px",
+                  top: "292px",
                   left: "50%",
                   transform: "translateX(-50%)",
                   width: "16px",
@@ -101,24 +101,24 @@ export default function ExperienceTimeline() {
                   backgroundColor: "#ffffff",
                   borderRadius: 3,
                   position: "absolute",
-                  top: index % 2 === 0 ? "20px" : "310px",
+                  top: "20px",
                   transition: "0.3s",
                   "&:hover": {
-                    transform: index % 2 === 0 ? "translateY(-10px)" : "translateY(10px)",
+                    transform: "translateY(-10px)",
                     boxShadow: 6,
                   },
 
                   "&::before": {
                     content: '""',
                     position: "absolute",
-                    [index % 2 === 0 ? "bottom" : "top"]: "-12px",
+                    bottom: "-12px",
                     left: "50%",
                     transform: "translateX(-50%)",
                     width: 0,
                     height: 0,
                     borderLeft: "12px solid transparent",
                     borderRight: "12px solid transparent",
-                    [index % 2 === 0 ? "borderTop" : "borderBottom"]: "12px solid #ffffff",
+                    borderTop: "12px solid #ffffff",
                   }
                 }}
               >

@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 import projects from "../assets/data/projects.json";
 import ProjectCard from "../components/projectcard";
 import { palette } from "../styles/colors";
@@ -24,49 +24,13 @@ export default function ProjectGrid() {
       >
         PROJECTS
       </Typography>
-      <Typography
-        variant="body2"
-        sx={{
-          color: palette.darkBrown,
-          textAlign: "center",
-          mb: 3,
-        }}
-      >
-        Scroll left/right for more projects!
-      </Typography>
-      <Box
-        sx={{
-          display: "flex",
-          gap: 2,
-          overflowX: "auto",
-          py: 1,
-          px: 1,
-          scrollSnapType: "x mandatory",
-          "&::-webkit-scrollbar": {
-            height: "8px",
-          },
-          "&::-webkit-scrollbar-track": {
-            backgroundColor: palette.midGreen,
-            borderRadius: "999px",
-          },
-          "&::-webkit-scrollbar-thumb": {
-            backgroundColor: palette.softBrown,
-            borderRadius: "999px",
-          },
-        }}
-      >
+      <Grid container spacing={3} justifyContent={"center"} alignItems={"stretch"}>
         {projects.map((proj, index) => (
-          <Box
-            key={index}
-            sx={{
-              flex: "0 0 320px",
-              scrollSnapAlign: "start",
-            }}
-          >
+          <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: "flex" }}>
             <ProjectCard proj={proj} />
-          </Box>
+          </Grid>
         ))}
-      </Box>
+      </Grid>
     </Box>
   );
 }

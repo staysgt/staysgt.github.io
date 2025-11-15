@@ -12,7 +12,9 @@ import { palette } from "../styles/colors";
 import projectPlaceholder from "../assets/images/projectsImages/ThreeTrios.png";
 
 export default function ProjectCard({ proj }) {
-  const languageList = proj.languages?.split(/[\s,]+/) || [];
+  const languageList = proj.languages
+    ? proj.languages.split(",").map((item) => item.trim()).filter(Boolean)
+    : [];
   const imageSrc = proj.image
     ? require(`../assets/images/projectsImages/${proj.image}`)
     : projectPlaceholder;
@@ -68,10 +70,18 @@ export default function ProjectCard({ proj }) {
         >
           {proj.description}
         </Typography>
-        <Typography variant="body2" sx={{ fontWeight: 500, color: palette.richBrown }}>
+        <Typography variant="body2" sx={{ fontWeight: 800, color: palette.richBrown }}>
           Technologies:
         </Typography>
-        <Stack direction="row" spacing={1} sx={{ mt: 0.5, flexWrap: "wrap" }}>
+        <Stack
+          direction="row"
+          spacing={1.5}
+          sx={{
+            mt: 1,
+            flexWrap: "wrap",
+            rowGap: .5,
+          }}
+        >
           {languageList.map((lang, i) => (
             <Chip
               key={i}

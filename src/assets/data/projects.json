@@ -27,6 +27,20 @@
         "languages": "React, MUI, JSON",
         "link":"https://github.com/staysgt/staysgt.github.io",
         "image": "PersonalPortfolio.png"
+      },
+      {
+        "name": "SAIL - HackMIT '25",
+        "description": "Developed an educational platform using React and Supabase designed to reduce student dependency on AI tools through interactive comprehension assessments. Integrated Claude AI and Google Cloud Speech-to-Text APIs to provide real-time evaluation of student understanding and generate actionable feedback for educators, promoting deeper learning engagement.",
+        "languages": "React, Javascript, Prisma, Supabase, Claude API, Google Cloud Speech-to-Text",
+        "link":"https://github.com/lewisabel/hackMIT-2025",
+        "image": "SAIL.png"
+      },
+      {
+        "name": "CopOrNot - HackHarvard '25",
+        "description": "Developed a crowdsourcing mobile application that allows users to report and track police presence at MBTA train stations in real-time. The app calculates probability scores based on user submissions and provides historical data visualization, enhancing commuter safety awareness and providing peace of mind when navigating unfamiliar transit locations.",
+        "languages": "React Native, Expo, JavaScript, Google Maps API, MBTA API",
+        "link":"https://github.com/rileydrcelik/co-p-or--not",
+        "image": "CopOrNot.png"
       }
   ]
 
