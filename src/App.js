@@ -6,6 +6,7 @@ import ExperienceTimeline from './sections/Experience';
 import './assets/fonts/fonts.css';
 import { createTheme, ThemeProvider, CssBaseline } from '@mui/material';
 import { palette } from './styles/colors';
+import Interests from './sections/Interests';
 
 const theme = createTheme({
   typography: {
@@ -35,7 +36,8 @@ function App() {
         <About />
         <SkillsBox/>
         <ExperienceTimeline/>
-        <ProjectGrid/>      
+        <ProjectGrid/>  
+        {/* <Interests/> */}
       </div>
     </ThemeProvider>
   );

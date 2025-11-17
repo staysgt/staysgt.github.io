@@ -142,7 +142,7 @@ export default function SkillsBox() {
           color: palette.richBrown
         }}
       >
-        ASK ME ANYTHING ABOUT...
+        Ask me anything about...
       </Typography>
       
       <Box

@@ -6,10 +6,10 @@ import { palette } from "../styles/colors";
 export default function ProjectGrid() {
   return (
     <Box
-      sx={{ p: "1rem", mb: { xs: 6, md: 10 } }}
+      sx={{ pt: "1rem", px: "1rem", pb: "1rem", mb: { xs: 6, md: 10 }, borderTop: `3px solid ${palette.midGreen}` }}
       style={{
         backgroundColor: palette.softGreen,
-        boxShadow: "0 4px 12px rgba(63, 46, 38, 0.12)",
+        boxShadow: "none",
       }}
     >
       <Typography
@@ -22,7 +22,7 @@ export default function ProjectGrid() {
           mb: 1.5,
         }}
       >
-        PROJECTS
+        Projects
       </Typography>
       <Grid container spacing={3} justifyContent={"center"} alignItems={"stretch"}>
         {projects.map((proj, index) => (

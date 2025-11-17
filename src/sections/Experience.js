@@ -5,10 +5,10 @@ import { palette } from "../styles/colors";
 export default function ExperienceTimeline() {
   return (
     <Box
-      sx={{ p: "2rem", mb: { xs: 6, md: 10 } }}
+      sx={{ p: "2rem", mb: 0, borderTop: `3px solid ${palette.midGreen}` }}
       style={{
         backgroundColor: palette.softGreen,
-        boxShadow: "0 4px 12px rgba(63, 46, 38, 0.12)",
+        boxShadow: "none",
       }}
     >
       <Typography
@@ -21,7 +21,7 @@ export default function ExperienceTimeline() {
           color: palette.richBrown,
         }}
       >
-        EXPERIENCES
+        Experiences
       </Typography>
       <Box
         sx={{

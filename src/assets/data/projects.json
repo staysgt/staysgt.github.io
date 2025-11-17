@@ -21,13 +21,7 @@
         "link":"https://github.com/staysgt/Image-Compression",
         "image": "ImageCompression.png"
       },
-      {
-        "name": "My Portfolio",
-        "description": "A personal portfolio website I built using React with JSON-based data storage for streamlined content management. The site showcases my projects and technical skills through a clean, responsive interface that's easy to maintain and update.",
-        "languages": "React, MUI, JSON",
-        "link":"https://github.com/staysgt/staysgt.github.io",
-        "image": "PersonalPortfolio.png"
-      },
+
       {
         "name": "SAIL - HackMIT '25",
         "description": "Developed an educational platform using React and Supabase designed to reduce student dependency on AI tools through interactive comprehension assessments. Integrated Claude AI and Google Cloud Speech-to-Text APIs to provide real-time evaluation of student understanding and generate actionable feedback for educators, promoting deeper learning engagement.",

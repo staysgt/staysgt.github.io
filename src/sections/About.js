@@ -21,7 +21,7 @@ export default function About() {
             color: palette.richBrown,
           }}
         >
-          ABOUT ME!
+          About me!
         </Typography>
 
         <Box
