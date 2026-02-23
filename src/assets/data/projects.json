@@ -35,7 +35,23 @@
         "languages": "React Native, Expo, JavaScript, Google Maps API, MBTA API",
         "link":"https://github.com/rileydrcelik/co-p-or--not",
         "image": "CopOrNot.png"
+      },
+      {
+        "name": "Jean Sizing Converter",
+        "description": "Developed a full stack mobile app to help fix women's jean sizing inconsistencies, despite sizing differences among brands.",
+        "languages": "React Native, Expo, Typescript, Firebase API, Postman, Vitest, Next.js",
+        "link":"",
+        "image": "JeanSizing.png"
+      },
+      {
+        "name": "Word Game",
+        "description": "Developed a terminal playable word game in Java. Implements binary search, object oriented design.",
+        "languages": "Java, JUnit, OOP",
+        "link":"",
+        "image": "WordGame.png"
       }
+
+
   ]
 
   

@@ -3,28 +3,29 @@
       "jobTitle": "Head Camp Counselor",
       "company": "Ridgefield Parks and Recreation",
       "description": "Led a group of 10-15 kindergarteners, ensuring a fun and safe camp experience. Guided 2-3 co-counselors, directed campers through activities, and maintained a positive atmosphere. Ensured campers adhered to safety protocol and communicated with parents about camper behavior.",
-      "timeFrame": "June 2022 - August 2024",
-      "image": "Rec.png"
+      "timeFrame": "June 2022 - Aug 2024",
+      "skills": "Communication, Patience, Leadership, Organization"
     },
     {
       "jobTitle": "Program Instructor",
       "company": "Kids in Tech",
       "description": "Engaged students (ages 9-14) in STEAM through weekly interactive, tech-focused lessons. Collaborated with other instructors to produce engaging and interactive material for sessions.",
-      "timeFrame": "September 2024 - April 2025",
-      "image": "KiT.png"
-    },
-    {
-      "jobTitle": "Full Stack Developer",
-      "company": "Northeastern Electric Racing Club",
-      "description": "Work on the web development team to help create project management dashboard",
-      "timeFrame": "September 2024 - Present",
-      "image": "NER2.png"
-    },
-    {
+      "timeFrame": "Sep 2024 - April 2025",
+      "skills": "Communication"
+
+    },    {
       "jobTitle": "Software Engineer Co-op",
       "company": "ZOLL Medical Corporation",
-      "description": "Work on embedded systems in the medical technology field.",
-      "timeFrame": "May 2025 - Present",
-      "image": "ZOLL.png"
+      "description": "Designed and implemented safety critical software in C/C++, working on low level system interfaces and communication protocols. Built Python automation to streamline testing workflows, reduce manual effort, and improve overall software quality.",
+      "timeFrame": "May 2025 - Dec 2025",
+      "skills": "C, C++, Python, Git, Bitbucket, Agile, Microcontrollers"
+    },
+    {
+      "jobTitle": "Technical Lead / Full Stack Developer",
+      "company": "Northeastern Electric Racing Club",
+      "description": "Develop full-stack solutions from writing TypeScript endpoints to building React components in a collaborative environment using Docker and GitHub.",
+      "timeFrame": "Sep 2024 - Present",
+      "skills": "Typescript, React, Git, Github, Docker"
+
     }
   ]

@@ -63,14 +63,16 @@ export default function About() {
                 color: palette.darkBrown,
               }}
             >
-              Hi, I'm Sarah! I am currently a third year student at
-              Northeastern University in Boston studying Computer Science, with
-              a concentration in software, within the Khoury College of Computer
-              Sciences. Currently, I'm completing my first co-op at ZOLL Medical
-              Corporation as a Software Engineer, specifically working with
-              embedded medical systems. Outside of coding, my interests include
-              horses (grew up riding for 10+ years!), dogs, concerts, and board
-              games.
+              Hi, I'm Sarah! I’m a third-year Computer Science student at
+              Northeastern University in Boston, studying within the Khoury
+              College of Computer Sciences with a concentration in software. I’m
+              on track to graduate in Spring 2027, and I’m currently seeking a
+              Fall 2026 software engineering co-op (May - December 2026).
+              <br></br>
+              <br></br>I recently completed my first co-op at ZOLL Medical,
+              working as a Software Engineer, specifically working with embedded
+              medical systems. Outside of coding, my interests include horses (I
+              grew up riding for 10+ years!), dogs, concerts, and board games.
             </Typography>
           </Box>
         </Box>
@@ -80,7 +82,7 @@ export default function About() {
             target="_blank"
             rel="noreferrer"
             style={{ color: palette.richBrown, textDecoration: "none" }}
-            >
+          >
             <GitHubIcon sx={{ fontSize: 50 }} />
           </a>
 
