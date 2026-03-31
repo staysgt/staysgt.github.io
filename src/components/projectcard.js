@@ -18,39 +18,58 @@ export default function ProjectCard({ proj }) {
   const imageSrc = proj.image
     ? require(`../assets/images/projectsImages/${proj.image}`)
     : projectPlaceholder;
+
   return (
     <Card
       sx={{
         maxWidth: "390px",
+        width: "100%",
         height: "100%",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-        borderRadius: 4,
-        boxShadow: "0 6px 12px rgba(63, 46, 38, 0.12)",
-        transition: "0.3s",
+        borderRadius: 3,
+        borderTop: `5px solid ${palette.navy}`,
+        boxShadow: `4px 4px 0px ${palette.pink}`,
+        transition: "0.25s",
         "&:hover": {
-          transform: "translateY(-5px)",
-          boxShadow: "0 10px 16px rgba(63, 46, 38, 0.18)",
+          transform: "translateY(-5px) translateX(3px)",
+          boxShadow: `6px 6px 0px ${palette.navy}`,
+          borderTopColor: palette.pink,
         },
-        backgroundColor: palette.warmWhite,
-        border: `1px solid ${palette.midGreen}`,
+        backgroundColor: palette.white,
+        border: `1px solid ${palette.midCream}`,
+        borderTopWidth: "5px",
+        borderTopColor: palette.navy,
       }}
     >
       <CardMedia
         component="img"
-        height="180"
+        height="190"
         image={imageSrc}
         alt={`${proj.name} preview`}
-        sx={{ objectFit: "cover", borderBottom: `1px solid ${palette.midGreen}` }}
+        sx={{ objectFit: "cover", objectPosition: "top" }}
       />
-      <CardContent sx={{ flexGrow: 1 }}>
-        <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+      <CardContent sx={{ flexGrow: 1, pt: 2 }}>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            mb: 0.5,
+          }}
+        >
           <Typography
             gutterBottom
             variant="h6"
             component="div"
-            sx={{ fontWeight: 600, color: palette.richBrown }}
+            sx={{
+              fontFamily: "'Archivo Black', sans-serif",
+              fontWeight: 900,
+              color: palette.navy,
+              fontSize: "1rem",
+              m: 0,
+            }}
           >
             {proj.name}
           </Typography>
@@ -58,29 +77,40 @@ export default function ProjectCard({ proj }) {
             href={proj.link}
             target="_blank"
             rel="noreferrer"
-            style={{ color: palette.richBrown, textDecoration: "none" }}
+            style={{ color: palette.navy, textDecoration: "none" }}
           >
-            <GitHubIcon fontSize="small" />
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: 32,
+                height: 32,
+                borderRadius: "50%",
+                backgroundColor: palette.cream,
+                border: `2px solid ${palette.navy}`,
+                transition: "0.2s",
+                "&:hover": {
+                  backgroundColor: palette.pink,
+                  borderColor: palette.pink,
+                  color: palette.white,
+                },
+              }}
+            >
+              <GitHubIcon sx={{ fontSize: 16 }} />
+            </Box>
           </a>
         </Box>
         <Typography
           variant="body2"
-          color="text.secondary"
-          sx={{ mb: 1, fontSize: 14 }}
+          sx={{ mb: 1.5, fontSize: "0.85rem", color: palette.softText, lineHeight: 1.6 }}
         >
           {proj.description}
         </Typography>
-        <Typography variant="body2" sx={{ fontWeight: 800, color: palette.richBrown }}>
-          Technologies:
-        </Typography>
         <Stack
           direction="row"
-          spacing={1.5}
-          sx={{
-            mt: 1,
-            flexWrap: "wrap",
-            rowGap: .5,
-          }}
+          spacing={0.75}
+          sx={{ mt: 1, flexWrap: "wrap", rowGap: 0.75 }}
         >
           {languageList.map((lang, i) => (
             <Chip
@@ -88,16 +118,17 @@ export default function ProjectCard({ proj }) {
               label={lang}
               size="small"
               sx={{
-                backgroundColor: palette.warmWhite,
-                color: palette.richBrown,
-                fontWeight: 500,
-                border: `1px solid ${palette.midGreen}`,
-                transition: "0.3s",
+                backgroundColor: palette.lightPink,
+                color: palette.navy,
+                fontWeight: 600,
+                fontSize: "0.7rem",
+                border: `1px solid ${palette.pink}`,
+                borderRadius: "6px",
+                transition: "0.2s",
                 "&:hover": {
-                  backgroundColor: palette.midGreen,
-                  color: palette.darkGreen,
-                  border: "none",
-                }
+                  backgroundColor: palette.pink,
+                  color: palette.white,
+                },
               }}
             />
           ))}

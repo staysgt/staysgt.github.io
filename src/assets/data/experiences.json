@@ -11,7 +11,7 @@
       "company": "Kids in Tech",
       "description": "Engaged students (ages 9-14) in STEAM through weekly interactive, tech-focused lessons. Collaborated with other instructors to produce engaging and interactive material for sessions.",
       "timeFrame": "Sep 2024 - April 2025",
-      "skills": "Communication"
+      "skills": "Communication, Collaboration"
 
     },    {
       "jobTitle": "Software Engineer Co-op",
@@ -23,7 +23,7 @@
     {
       "jobTitle": "Technical Lead / Full Stack Developer",
       "company": "Northeastern Electric Racing Club",
-      "description": "Develop full-stack solutions from writing TypeScript endpoints to building React components in a collaborative environment using Docker and GitHub.",
+      "description": "Lead a team of developers building a project management dashboard used by hundreds of club members, contributing full-stack solutions across TypeScript endpoints and React components. Currently driving a Guest Mode redesign to improve accessibility for sponsors, prospective members, and competition judges.",
       "timeFrame": "Sep 2024 - Present",
       "skills": "Typescript, React, Git, Github, Docker"
 

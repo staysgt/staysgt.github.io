@@ -6,25 +6,31 @@ import { palette } from "../styles/colors";
 export default function ProjectGrid() {
   return (
     <Box
-      sx={{ pt: "1rem", px: "1rem", pb: "1rem", mb: { xs: 6, md: 10 }, borderTop: `3px solid ${palette.midGreen}` }}
-      style={{
-        backgroundColor: palette.softGreen,
-        boxShadow: "none",
+      id="projects"
+      sx={{
+        py: "3rem",
+        px: { xs: "1rem", md: "2rem" },
+        pb: { xs: "5rem", md: "6rem" },
+        backgroundColor: palette.cream,
       }}
     >
       <Typography
         variant="h3"
         sx={{
-          fontFamily: 'myhandwriting, sans-serif',
-          fontWeight: 'bold',
-          color: palette.richBrown,
+          fontFamily: "'Archivo Black', sans-serif",
+          fontWeight: 900,
+          color: palette.navy,
           textAlign: "center",
-          mb: 1.5,
+          textTransform: "uppercase",
+          letterSpacing: "0.04em",
+          fontSize: { xs: "1.8rem", md: "2.6rem" },
+          mb: 4,
         }}
       >
         Projects
+        <Box component="span" sx={{ color: palette.pink, ml: 1 }}>✦</Box>
       </Typography>
-      <Grid container spacing={3} justifyContent={"center"} alignItems={"stretch"}>
+      <Grid container spacing={3} justifyContent="center" alignItems="stretch">
         {projects.map((proj, index) => (
           <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: "flex" }}>
             <ProjectCard proj={proj} />

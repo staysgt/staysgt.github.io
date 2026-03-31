@@ -3,27 +3,28 @@ import About from './sections/About';
 import SkillsBox from './sections/Skills';
 import ProjectGrid from './sections/Projects';
 import ExperienceTimeline from './sections/Experience';
+import SectionMarquee from './components/Marquee';
+import Navbar from './components/Navbar';
 import './assets/fonts/fonts.css';
 import { createTheme, ThemeProvider, CssBaseline } from '@mui/material';
 import { palette } from './styles/colors';
-import Interests from './sections/Interests';
 
 const theme = createTheme({
   typography: {
-    fontFamily: "'Baloo 2', cursive",
+    fontFamily: "'Space Grotesk', sans-serif",
   },
   palette: {
     primary: {
-      main: palette.deepGreen,
+      main: palette.navy,
     },
     secondary: {
-      main: palette.richBrown,
+      main: palette.pink,
     },
     background: {
-      default: palette.softGreen,
+      default: palette.cream,
     },
     text: {
-      primary: palette.richBrown,
+      primary: palette.darkText,
     },
   },
 });
@@ -33,11 +34,14 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <div className="App">
+        <Navbar />
         <About />
-        <SkillsBox/>
-        <ExperienceTimeline/>
-        <ProjectGrid/>  
-        {/* <Interests/> */}
+        <SectionMarquee text="Skills" />
+        <SkillsBox />
+        <SectionMarquee text="Experience" />
+        <ExperienceTimeline />
+        <SectionMarquee text="Projects" />
+        <ProjectGrid />
       </div>
     </ThemeProvider>
   );

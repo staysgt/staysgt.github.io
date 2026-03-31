@@ -1,227 +1,162 @@
-import { 
-  Box, 
-  Typography, 
-  Paper, 
-  Chip,
-  Stack
-} from "@mui/material";
+import { Box, Typography, Chip, Stack } from "@mui/material";
 import experience from "../assets/data/experiences.json";
 import { palette } from "../styles/colors";
 
 export default function ExperienceTimeline() {
-  // Format date to use en dash (May 2025 – Dec 2025)
   const formatDateRange = (timeFrame) => {
     return timeFrame.replace(/\s*-\s*/g, " – ");
   };
 
-  // Parse skills string into array
   const parseSkills = (skillsString) => {
     if (!skillsString) return [];
     return skillsString
       .split(",")
-      .map(skill => skill.trim())
-      .filter(skill => skill.length > 0);
+      .map((s) => s.trim())
+      .filter((s) => s.length > 0);
   };
 
   const experiences = [...experience].reverse();
 
   return (
     <Box
-      sx={{ 
-        p: { xs: "2rem 1rem", sm: "2rem", md: "3rem" }, 
-        mb: 0, 
-        borderTop: `3px solid ${palette.midGreen}`,
-        backgroundColor: palette.softGreen,
-        boxShadow: "none",
+      id="experience"
+      sx={{
+        py: { xs: "2rem", md: "2.5rem" },
+        px: { xs: "1rem", sm: "2rem", md: "3rem" },
+        backgroundColor: palette.cream,
       }}
     >
       <Typography
         variant="h3"
         sx={{
-          mb: { xs: 3, md: 5 },
+          mb: { xs: 3, md: 4 },
           textAlign: "center",
-          fontFamily: 'myhandwriting, sans-serif',
-          fontWeight: 'bold',
-          color: palette.richBrown,
+          fontFamily: "'Archivo Black', sans-serif",
+          fontWeight: 900,
+          color: palette.navy,
+          textTransform: "uppercase",
+          letterSpacing: "0.04em",
+          fontSize: { xs: "1.8rem", md: "2.6rem" },
         }}
       >
-        Experiences
+        Experience
+        <Box component="span" sx={{ color: palette.pink, ml: 1 }}>
+          ✦
+        </Box>
       </Typography>
-      
-      {/* Vertical Timeline Container */}
+
       <Box
         sx={{
           maxWidth: "900px",
           mx: "auto",
-          position: "relative",
-          px: { xs: 2, sm: 4, md: 6 },
+          display: "grid",
+          gridTemplateColumns: { xs: "1fr", md: "repeat(2, 1fr)" },
+          gap: 3,
         }}
       >
-        {/* Timeline Line */}
-        <Box
-          sx={{
-            position: "absolute",
-            left: { xs: "20px", sm: "40px", md: "60px" },
-            top: 0,
-            bottom: 0,
-            width: "3px",
-            backgroundColor: palette.midGreen,
-            display: { xs: "none", sm: "block" },
-          }}
-        />
-
-        {/* Experience Cards */}
         {experiences.map((exp, index) => (
           <Box
             key={index}
             sx={{
-              position: "relative",
-              mb: 4,
-              pl: { xs: 0, sm: "80px", md: "120px" },
+              p: { xs: 2, sm: 2.5 },
+              backgroundColor: palette.white,
+              borderRadius: 3,
+              borderTop: `5px solid ${index % 2 === 0 ? palette.navy : palette.pink}`,
+              boxShadow: `4px 4px 0px ${index % 2 === 0 ? palette.pink : palette.navy}`,
+              transition: "all 0.25s ease",
               display: "flex",
-              alignItems: "flex-start",
+              flexDirection: "column",
+              "&:hover": {
+                transform: "translateY(-4px) translateX(2px)",
+                boxShadow: `6px 6px 0px ${index % 2 === 0 ? palette.navy : palette.pink}`,
+              },
             }}
           >
-            {/* Timeline Dot */}
+            {/* Header row */}
             <Box
               sx={{
-                position: "absolute",
-                left: { xs: "12px", sm: "32px", md: "52px" },
-                top: "24px",
-                width: { xs: "16px", sm: "20px" },
-                height: { xs: "16px", sm: "20px" },
-                borderRadius: "50%",
-                backgroundColor: palette.darkGreen,
-                border: `3px solid ${palette.softGreen}`,
-                boxShadow: `0 0 0 3px ${palette.midGreen}`,
-                zIndex: 1,
-                display: { xs: "none", sm: "block" },
-              }}
-            />
-
-            {/* Experience Card */}
-            <Paper
-              elevation={2}
-              sx={{
-                width: "100%",
-                maxWidth: "700px",
-                p: { xs: 2, sm: 3 },
-                backgroundColor: "#ffffff",
-                borderRadius: 3,
-                borderLeft: `6px solid ${palette.darkGreen}`,
-                boxShadow: "0 4px 10px rgba(63, 46, 38, 0.1)",
-                transition: "all 0.3s ease",
-                transform: "translateX(0)",
-                "&:hover": {
-                  transform: "translateX(8px) scale(1.02)",
-                  boxShadow: "0 8px 20px rgba(63, 46, 38, 0.15)",
-                  borderLeftWidth: "8px",
-                },
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "flex-start",
+                gap: 1,
+                mb: 1,
               }}
             >
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: { xs: "column", sm: "row" },
-                  alignItems: { xs: "flex-start", sm: "flex-start" },
-                  justifyContent: "space-between",
-                  gap: 2,
-                  mb: 2,
-                }}
-              >
-                <Box sx={{ flex: 1 }}>
-                  <Typography
-                    variant="h5"
-                    sx={{
-                      fontWeight: 700,
-                      color: palette.darkGreen,
-                      mb: 0.5,
-                      fontSize: { xs: "1.25rem", sm: "1.5rem" },
-                    }}
-                  >
-                    {exp.jobTitle}
-                  </Typography>
-                  <Typography
-                    variant="h6"
-                    sx={{
-                      fontWeight: 600,
-                      color: palette.richBrown,
-                      fontSize: { xs: "0.95rem", sm: "1.1rem" },
-                    }}
-                  >
-                    {exp.company}
-                  </Typography>
-                </Box>
-                <Chip
-                  label={formatDateRange(exp.timeFrame)}
-                  size="medium"
+              <Box sx={{ flex: 1 }}>
+                <Typography
                   sx={{
-                    backgroundColor: palette.midGreen,
-                    color: palette.richBrown,
-                    fontWeight: 600,
-                    fontSize: { xs: "0.75rem", sm: "0.875rem" },
-                    height: { xs: "28px", sm: "32px" },
+                    fontFamily: "'Archivo Black', sans-serif",
+                    fontWeight: 900,
+                    color: palette.navy,
+                    fontSize: { xs: "1rem", sm: "1.05rem" },
+                    lineHeight: 1.2,
+                    mb: 0.25,
                   }}
-                />
+                >
+                  {exp.jobTitle}
+                </Typography>
+                <Typography
+                  sx={{
+                    fontWeight: 600,
+                    color: palette.pink,
+                    fontSize: "0.875rem",
+                  }}
+                >
+                  {exp.company}
+                </Typography>
               </Box>
-              
-              <Typography
-                variant="body2"
-                sx={{ 
-                  mt: 1,
-                  mb: 2,
-                  fontSize: { xs: "0.875rem", sm: "0.9375rem" }, 
-                  lineHeight: 1.7,
-                  color: palette.softBrown,
+              <Chip
+                label={formatDateRange(exp.timeFrame)}
+                size="small"
+                sx={{
+                  backgroundColor: palette.navy,
+                  color: palette.cream,
+                  fontWeight: 700,
+                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontSize: "0.65rem",
+                  height: "22px",
+                  borderRadius: "5px",
+                  flexShrink: 0,
                 }}
-              >
-                {exp.description}
-              </Typography>
+              />
+            </Box>
 
-              {/* Skills */}
-              {exp.skills && parseSkills(exp.skills).length > 0 && (
-                <Box sx={{ mt: 2 }}>
-                  <Typography
-                    variant="caption"
+            <Typography
+              variant="body2"
+              sx={{
+                fontSize: "0.85rem",
+                lineHeight: 1.65,
+                color: palette.softText,
+                mb: 1.5,
+                flex: 1,
+              }}
+            >
+              {exp.description}
+            </Typography>
+
+            {exp.skills && parseSkills(exp.skills).length > 0 && (
+              <Stack direction="row" spacing={0.75} flexWrap="wrap" useFlexGap>
+                {parseSkills(exp.skills).map((skill, i) => (
+                  <Chip
+                    key={i}
+                    label={skill}
+                    size="small"
                     sx={{
-                      display: "block",
-                      mb: 1,
+                      backgroundColor: palette.lightPink,
+                      color: palette.navy,
                       fontWeight: 600,
-                      color: palette.darkGreen,
-                      fontSize: "0.75rem",
-                      textTransform: "uppercase",
-                      letterSpacing: "0.5px",
+                      fontSize: "0.65rem",
+                      border: `1px solid ${palette.pink}`,
+                      borderRadius: "5px",
+                      "&:hover": {
+                        backgroundColor: palette.pink,
+                        color: palette.white,
+                      },
                     }}
-                  >
-                    Skills
-                  </Typography>
-                  <Stack
-                    direction="row"
-                    spacing={1}
-                    flexWrap="wrap"
-                    useFlexGap
-                  >
-                    {parseSkills(exp.skills).map((skill, skillIndex) => (
-                      <Chip
-                        key={skillIndex}
-                        label={skill}
-                        size="small"
-                        sx={{
-                          backgroundColor: palette.deepGreen,
-                          color: palette.richBrown,
-                          fontWeight: 500,
-                          fontSize: "0.75rem",
-                          "&:hover": {
-                            backgroundColor: palette.darkGreen,
-                            color: "#ffffff",
-                          },
-                        }}
-                      />
-                    ))}
-                  </Stack>
-                </Box>
-              )}
-            </Paper>
+                  />
+                ))}
+              </Stack>
+            )}
           </Box>
         ))}
       </Box>

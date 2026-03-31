@@ -1,11 +1,12 @@
 export const palette = {
-  softGreen: '#f9fbe9',
-  midGreen: '#edf4c9',
-  deepGreen: '#dfeab0',
-  darkGreen: '#4f6b36',
-  richBrown: '#5b453a',
-  softBrown: '#876a53',
-  darkBrown: '#3f2e26',
-  warmWhite: '#fdfbf3',
+  cream: '#f0ebe0',
+  midCream: '#e4ddd0',
+  navy: '#1b2d6b',
+  softNavy: '#2d4a9e',
+  pink: '#e8337a',
+  lightPink: '#fce4f0',
+  white: '#ffffff',
+  darkText: '#12142a',
+  softText: '#4a4a6a',
 };
 

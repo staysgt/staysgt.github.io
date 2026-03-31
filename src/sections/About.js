@@ -7,93 +7,245 @@ import { palette } from "../styles/colors";
 export default function About() {
   return (
     <Box
-      style={{
-        backgroundColor: palette.softGreen,
-        boxShadow: "0 4px 12px rgba(63, 46, 38, 0.12)",
+      id="about"
+      sx={{
+        backgroundColor: palette.cream,
+        py: { xs: 6, md: 8 },
+        px: { xs: 2, md: 4 },
+        position: "relative",
+        overflow: "hidden",
       }}
     >
-      <Container maxWidth="md" sx={{ py: 4 }}>
-        <Typography
-          variant="h3"
-          sx={{
-            fontFamily: "myhandwriting, sans-serif",
-            fontWeight: "bold",
-            color: palette.richBrown,
-          }}
-        >
-          About me!
-        </Typography>
+      {/* Decorative sparkles */}
+      <Typography
+        sx={{
+          position: "absolute",
+          top: "12%",
+          right: { xs: "5%", md: "8%" },
+          fontSize: { xs: "2rem", md: "3rem" },
+          color: palette.pink,
+          lineHeight: 1,
+          userSelect: "none",
+          pointerEvents: "none",
+        }}
+      >
+        ✦
+      </Typography>
+      <Typography
+        sx={{
+          position: "absolute",
+          top: "55%",
+          right: { xs: "3%", md: "5%" },
+          fontSize: "1.4rem",
+          color: palette.navy,
+          lineHeight: 1,
+          userSelect: "none",
+          pointerEvents: "none",
+        }}
+      >
+        ✧
+      </Typography>
+      <Typography
+        sx={{
+          position: "absolute",
+          bottom: "15%",
+          left: { xs: "3%", md: "6%" },
+          fontSize: { xs: "1.6rem", md: "2.2rem" },
+          color: palette.pink,
+          lineHeight: 1,
+          userSelect: "none",
+          pointerEvents: "none",
+        }}
+      >
+        ✦
+      </Typography>
+      <Typography
+        sx={{
+          position: "absolute",
+          top: "30%",
+          left: { xs: "2%", md: "3%" },
+          fontSize: "1.2rem",
+          color: palette.navy,
+          lineHeight: 1,
+          userSelect: "none",
+          pointerEvents: "none",
+        }}
+      >
+        +
+      </Typography>
 
+      <Container maxWidth="md">
         <Box
           sx={{
             display: "flex",
-            alignItems: "flex-start",
-            gap: 4,
+            alignItems: "center",
+            gap: { xs: 4, md: 6 },
             flexDirection: { xs: "column", md: "row" },
           }}
         >
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              gap: 2,
-              minWidth: { md: "200px" },
-            }}
-          >
-            <img
-              src={myface}
-              alt="Sarah"
-              style={{
-                width: "100%",
-                maxWidth: "200px",
-                height: "200px",
-                objectFit: "cover",
-                borderRadius: "50%",
-                boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-              }}
-            />
-          </Box>
-          <Box sx={{ flex: 1 }}>
-            <Typography
-              variant="body1"
+          {/* Photo */}
+          <Box sx={{ position: "relative", flexShrink: 0 }}>
+            <Box
               sx={{
-                fontSize: "1.1rem",
-                lineHeight: 1.7,
-                color: palette.darkBrown,
+                width: { xs: 180, md: 220 },
+                height: { xs: 180, md: 220 },
+                borderRadius: "50%",
+                border: `5px solid ${palette.pink}`,
+                boxShadow: `8px 8px 0px ${palette.navy}`,
+                overflow: "hidden",
               }}
             >
-              Hi, I'm Sarah! I’m a third-year Computer Science student at
-              Northeastern University in Boston, studying within the Khoury
-              College of Computer Sciences with a concentration in software. I’m
-              on track to graduate in Spring 2027, and I’m currently seeking a
-              Fall 2026 software engineering co-op (May - December 2026).
-              <br></br>
-              <br></br>I recently completed my first co-op at ZOLL Medical,
-              working as a Software Engineer, specifically working with embedded
-              medical systems. Outside of coding, my interests include horses (I
-              grew up riding for 10+ years!), dogs, concerts, and board games.
+              <img
+                src={myface}
+                alt="Sarah"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </Box>
+            {/* Sparkle near photo */}
+            <Typography
+              sx={{
+                position: "absolute",
+                top: -14,
+                right: -14,
+                fontSize: "1.8rem",
+                color: palette.navy,
+                lineHeight: 1,
+                userSelect: "none",
+              }}
+            >
+              ✦
+            </Typography>
+            <Typography
+              sx={{
+                position: "absolute",
+                bottom: -8,
+                left: -12,
+                fontSize: "1.2rem",
+                color: palette.pink,
+                lineHeight: 1,
+                userSelect: "none",
+              }}
+            >
+              ✧
             </Typography>
           </Box>
-        </Box>
-        <Box sx={{ display: "flex", gap: 2, mt: 3, justifyContent: "center" }}>
-          <a
-            href="https://github.com/staysgt"
-            target="_blank"
-            rel="noreferrer"
-            style={{ color: palette.richBrown, textDecoration: "none" }}
-          >
-            <GitHubIcon sx={{ fontSize: 50 }} />
-          </a>
 
-          <a
-            href="https://www.linkedin.com/in/staysgt"
-            target="_blank"
-            rel="noreferrer"
-            style={{ color: palette.richBrown, textDecoration: "none" }}
-          >
-            <LinkedInIcon sx={{ fontSize: 50 }} />
-          </a>
+          {/* Text */}
+          <Box sx={{ flex: 1 }}>
+            <Typography
+              sx={{
+                fontFamily: "'Archivo Black', sans-serif",
+                fontSize: { xs: "2.4rem", md: "3.4rem" },
+                fontWeight: 900,
+                color: palette.navy,
+                lineHeight: 1.05,
+                mb: 0.5,
+              }}
+            >
+              Hi, I'm Sarah!
+            </Typography>
+            <Typography
+              sx={{
+                fontFamily: "'myhandwriting', sans-serif",
+                fontSize: { xs: "1.3rem", md: "1.6rem" },
+                color: palette.pink,
+                mb: 2.5,
+              }}
+            >
+              Software Engineer ✦
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: { xs: "0.95rem", md: "1rem" },
+                lineHeight: 1.85,
+                color: palette.softText,
+                mb: 1.5,
+              }}
+            >
+              I'm a third-year Computer Science student at Northeastern
+              University in Boston, studying within the Khoury College of
+              Computer Sciences with a concentration in software. I'm on track
+              to graduate in Spring 2027, and I'm currently seeking a Fall 2026
+              software engineering co-op (May – December 2026).
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: { xs: "0.95rem", md: "1rem" },
+                lineHeight: 1.85,
+                color: palette.softText,
+                mb: 3,
+              }}
+            >
+              I recently completed my first co-op at ZOLL Medical as a Software
+              Engineer working with embedded medical systems. Outside of coding,
+              my interests include horses (I grew up riding for 10+ years!),
+              dogs, concerts, and board games.
+            </Typography>
+
+            {/* Social links */}
+            <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
+              <a
+                href="https://github.com/staysgt"
+                target="_blank"
+                rel="noreferrer"
+                style={{ textDecoration: "none" }}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                    backgroundColor: palette.navy,
+                    color: palette.cream,
+                    px: 2.5,
+                    py: 1,
+                    borderRadius: "30px",
+                    fontFamily: "'Space Grotesk', sans-serif",
+                    fontWeight: 700,
+                    fontSize: "0.9rem",
+                    transition: "0.2s",
+                    "&:hover": {
+                      backgroundColor: palette.pink,
+                      transform: "translateY(-2px)",
+                    },
+                  }}
+                >
+                  <GitHubIcon fontSize="small" />
+                  GitHub
+                </Box>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/staysgt"
+                target="_blank"
+                rel="noreferrer"
+                style={{ textDecoration: "none" }}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                    backgroundColor: palette.pink,
+                    color: palette.white,
+                    px: 2.5,
+                    py: 1,
+                    borderRadius: "30px",
+                    fontFamily: "'Space Grotesk', sans-serif",
+                    fontWeight: 700,
+                    fontSize: "0.9rem",
+                    transition: "0.2s",
+                    "&:hover": {
+                      backgroundColor: palette.navy,
+                      transform: "translateY(-2px)",
+                    },
+                  }}
+                >
+                  <LinkedInIcon fontSize="small" />
+                  LinkedIn
+                </Box>
+              </a>
+            </Box>
+          </Box>
         </Box>
       </Container>
     </Box>
