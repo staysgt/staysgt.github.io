@@ -166,8 +166,8 @@ export default function About() {
               College, concentrating in software and graduating Spring 2027. I
               completed my first co-op at ZOLL Medical working on embedded
               medical systems, and I'm heading into my second this June at
-              SimpliSafe in DevOps. Outside of coding, I'm into animals,
-              concerts, and board games.
+              SimpliSafe in DevOps. Outside of coding, I love going to concerts,
+              playing board games, and animals.
             </Typography>
             {/* Social links */}
             <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
