@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.daf7ac82.css",
-    "main.js": "/static/js/main.91559a86.js",
+    "main.js": "/static/js/main.564efc89.js",
     "static/js/453.d0ded385.chunk.js": "/static/js/453.d0ded385.chunk.js",
     "static/media/myface.png": "/static/media/myface.5d2a57f28652f2d1f952.png",
     "static/media/CopOrNot.png": "/static/media/CopOrNot.f5485188f1020a151f69.png",
+    "static/media/Capacious.png": "/static/media/Capacious.da9e98fb5f34d6c29c9f.png",
     "static/media/PersonalPortfolio.png": "/static/media/PersonalPortfolio.040f3b501ee50aa24147.png",
     "static/media/JeanSizing.png": "/static/media/JeanSizing.838e3890faedd78c7a0a.png",
     "static/media/ThreeTrios.png": "/static/media/ThreeTrios.e19e50cb65a3e8584174.png",
@@ -15,11 +16,11 @@
     "static/media/Takethree-Regular.ttf": "/static/media/Takethree-Regular.cfba6eaeca77ca129c3e.ttf",
     "index.html": "/index.html",
     "main.daf7ac82.css.map": "/static/css/main.daf7ac82.css.map",
-    "main.91559a86.js.map": "/static/js/main.91559a86.js.map",
+    "main.564efc89.js.map": "/static/js/main.564efc89.js.map",
     "453.d0ded385.chunk.js.map": "/static/js/453.d0ded385.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.daf7ac82.css",
-    "static/js/main.91559a86.js"
+    "static/js/main.564efc89.js"
   ]
 }
