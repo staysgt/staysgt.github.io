@@ -39,7 +39,7 @@ export default function ExperienceTimeline() {
           fontSize: { xs: "1.8rem", md: "2.6rem" },
         }}
       >
-        Experience
+        Roles I've grown into
         <Box component="span" sx={{ color: palette.pink, ml: 1 }}>
           ✦
         </Box>
@@ -66,6 +66,9 @@ export default function ExperienceTimeline() {
               transition: "all 0.25s ease",
               display: "flex",
               flexDirection: "column",
+              ...(experiences.length % 2 !== 0 && index === experiences.length - 1
+                ? { gridColumn: { md: "1 / -1" }, maxWidth: { md: "calc(50% - 12px)" }, mx: { md: "auto" } }
+                : {}),
               "&:hover": {
                 transform: "translateY(-4px) translateX(2px)",
                 boxShadow: `6px 6px 0px ${index % 2 === 0 ? palette.navy : palette.pink}`,

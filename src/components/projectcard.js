@@ -48,7 +48,7 @@ export default function ProjectCard({ proj }) {
         height="190"
         image={imageSrc}
         alt={`${proj.name} preview`}
-        sx={{ objectFit: "cover", objectPosition: "top" }}
+        sx={{ objectFit: "cover", objectPosition: "center" }}
       />
       <CardContent sx={{ flexGrow: 1, pt: 2 }}>
         <Box

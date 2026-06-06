@@ -144,7 +144,7 @@ export default function About() {
             >
               Hi, I'm Sarah!
             </Typography>
-            <Typography
+            {/* <Typography
               sx={{
                 fontFamily: "'myhandwriting', sans-serif",
                 fontSize: { xs: "1.3rem", md: "1.6rem" },
@@ -153,7 +153,7 @@ export default function About() {
               }}
             >
               Software Engineer ✦
-            </Typography>
+            </Typography> */}
             <Typography
               sx={{
                 fontSize: { xs: "0.95rem", md: "1rem" },
@@ -162,26 +162,13 @@ export default function About() {
                 mb: 1.5,
               }}
             >
-              I'm a third-year Computer Science student at Northeastern
-              University in Boston, studying within the Khoury College of
-              Computer Sciences with a concentration in software. I'm on track
-              to graduate in Spring 2027, and I'm currently seeking a Fall 2026
-              software engineering co-op (May – December 2026).
+              I'm a third-year CS student at Northeastern University's Khoury
+              College, concentrating in software and graduating Spring 2027. I
+              completed my first co-op at ZOLL Medical working on embedded
+              medical systems, and I'm heading into my second this June at
+              SimpliSafe in DevOps. Outside of coding, I'm into animals,
+              concerts, and board games.
             </Typography>
-            <Typography
-              sx={{
-                fontSize: { xs: "0.95rem", md: "1rem" },
-                lineHeight: 1.85,
-                color: palette.softText,
-                mb: 3,
-              }}
-            >
-              I recently completed my first co-op at ZOLL Medical as a Software
-              Engineer working with embedded medical systems. Outside of coding,
-              my interests include horses (I grew up riding for 10+ years!),
-              dogs, concerts, and board games.
-            </Typography>
-
             {/* Social links */}
             <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
               <a

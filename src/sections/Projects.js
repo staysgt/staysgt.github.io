@@ -27,7 +27,7 @@ export default function ProjectGrid() {
           mb: 4,
         }}
       >
-        Projects
+        Work I'm proud of
         <Box component="span" sx={{ color: palette.pink, ml: 1 }}>✦</Box>
       </Typography>
       <Grid container spacing={3} justifyContent="center" alignItems="stretch">
