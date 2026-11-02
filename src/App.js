@@ -3,6 +3,7 @@ import About from './sections/About';
 import SkillsBox from './sections/Skills';
 import ProjectGrid from './sections/Projects';
 import ExperienceTimeline from './sections/Experience';
+import Contact from './sections/Contact';
 import SectionMarquee from './components/Marquee';
 import Navbar from './components/Navbar';
 import './assets/fonts/fonts.css';
@@ -42,6 +43,7 @@ function App() {
         <ExperienceTimeline />
         <SectionMarquee text="Projects" />
         <ProjectGrid />
+        <Contact />
       </div>
     </ThemeProvider>
   );
